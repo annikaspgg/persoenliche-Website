@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Pressefoto-Platzhalter Performance">
+  <defs>
+    <pattern id="p" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="60" stroke="#4a4438" stroke-width="14" opacity="0.18"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1500" fill="#cfc3a9"/>
+  <rect width="1200" height="1500" fill="url(#p)"/>
+  <text x="600" y="700" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="56" fill="#4a4438">Pressefoto</text>
+  <text x="600" y="780" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="60" fill="#3a3530">Performance</text>
+  <text x="600" y="860" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" fill="#4a4438" letter-spacing="0.2em">[ PLATZHALTER ]</text>
+</svg>
