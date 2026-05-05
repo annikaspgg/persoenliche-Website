@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1066 1600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Platzhalter Flyer Faust.Margarete">
+  <defs>
+    <pattern id="f" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+      <line x1="0" y1="0" x2="0" y2="60" stroke="#c8392e" stroke-width="3" opacity="0.25"/>
+    </pattern>
+  </defs>
+  <rect width="1066" height="1600" fill="#f0ebe2"/>
+  <rect width="1066" height="1600" fill="url(#f)"/>
+  <text x="533" y="500" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="46" fill="#5a554c">FLYER</text>
+  <text x="533" y="600" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="50" fill="#3a3530">Faust.Margarete</text>
+  <text x="533" y="680" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="42" fill="#5a554c">// GRETCHEN WANTS A</text>
+  <text x="533" y="740" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="42" fill="#5a554c">FULL STORY</text>
+  <text x="533" y="900" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="32" fill="#7a7466" letter-spacing="0.18em">[ PLATZHALTER ]</text>
+  <text x="533" y="980" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" fill="#7a7466">echtes Flyer-Bild folgt</text>
+</svg>

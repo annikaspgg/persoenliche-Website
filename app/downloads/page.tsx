@@ -3,10 +3,12 @@ import Image from "next/image";
 import { ArrowUpRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { pageMetadata } from "@/lib/metadata";
+import { strikeFaust } from "@/lib/text";
 
 export const metadata: Metadata = pageMetadata(
   "Downloads & Links",
-  "Kurzvita, Pressefotos, Hörproben und externe Profile von Annika Spegg.",
+  "Pressetexte, hochauflösende Pressefotos, Hörproben und externe Profile von Annika Spegg — alles auf einer Seite zum Direktdownload.",
+  { path: "/downloads" },
 );
 
 const pressPhotos = [
@@ -33,15 +35,18 @@ const pressPhotos = [
 const videos = [
   {
     label: "Als Geigerin",
-    note: "Konzertaufnahmen — YouTube-Link",
+    note: "Konzertaufnahme",
+    url: "https://www.youtube.com/watch?v=T2VQG4BGO08",
   },
   {
     label: "Als Performerin",
-    note: "Primadonna (wanke.ensemble) — YouTube-Link",
+    note: "Primadonna (wanke.ensemble)",
+    url: "https://www.youtube.com/watch?v=p5iYfuOuUFE",
   },
   {
     label: "Als Dramaturgin",
-    note: "KommentarTheater — YouTube-Link",
+    note: "KommentarTheater",
+    url: "https://www.youtube.com/watch?v=2aCi2zae1NY",
   },
 ];
 
@@ -54,7 +59,7 @@ const profiles = [
   },
   {
     label: "Gesellschaft für Musik und Ästhetik",
-    url: "https://gesellschaft-fuer-musik-und-aesthetik.de",
+    url: "https://www.gfmuae.de/",
   },
 ];
 
@@ -106,8 +111,9 @@ export default function DownloadsPage() {
       >
         <SectionHeading id="kurzvita-heading">Kurzvita</SectionHeading>
         <p className="mt-6 max-w-[680px] text-[1.0625rem] leading-[1.6] text-text">
-          Eine Seite Pressetext mit den wichtigsten Stationen — direkt
-          verwendbar für Programmhefte und Ankündigungen.
+          {strikeFaust(
+            "Annika Spegg (*1998) ist Musikerin und interdisziplinäre Künstlerin, die sich der Suche nach neuen künstlerischen Formaten verschrieben hat. Parallel zum Geigenstudium absolvierte sie ein Studium der Germanistik und Philosophie. Aktuell ist sie an der HMT Leipzig im Master Dramaturgie eingeschrieben; zuvor studierte sie im Master Violine an der HMDK Stuttgart, wo sie sich verstärkt der Neuen und der Alten Musik zuwendete und 2024 mit Auszeichnung abschloss. Eigene Musiktheater-Produktionen (darunter z. B. Pionier:in Ingolstadt (2022) und KommentarTheater (2024)), in denen sie als Dramaturgin, Darstellerin und Geigerin eingebunden ist, entstehen seit 2022. An der HMDK Stuttgart übernahm sie zwischen 2022 und 2024 mit Robert Rülke leitende Funktionen in der Klimabühne, die nach künstlerischen Antworten auf den Klimawandel sucht. Orchesterengagements führten sie ans Staatsorchester Stuttgart, Stuttgarter Kammerorchester, Gewandhaus Leipzig und Ensemble Resonanz Hamburg. Seit 2024 ist sie Stipendiatin der Akademie Musiktheater heute in der Sparte Dramaturgie. 2025 erhielt sie neben dem Stipendium der Gesellschaft für Musik und Ästhetik das #MusikerZukunft-Stipendium der Deutschen Orchesterstiftung für ihr feministisches Kammermusiktheater Faust.Margarete // Gretchen wants a full story, das 2026 in Leipzig und Stuttgart aufgeführt wird.",
+          )}
         </p>
         <div className="mt-8">
           <Button
@@ -171,19 +177,29 @@ export default function DownloadsPage() {
           werden ohne Klick keine Daten an YouTube übertragen.
         </p>
 
-        <ul className="mt-10 max-w-2xl space-y-6">
+        <ul className="mt-10 max-w-2xl divide-y divide-border border-y border-border">
           {videos.map((v) => (
-            <li
-              key={v.label}
-              className="flex flex-col gap-2 border-b border-border pb-6 last:border-b-0"
-            >
-              <p className="font-display text-text" style={{ fontSize: "1.25rem", fontVariationSettings: "'opsz' 60" }}>
-                {v.label}
-              </p>
-              <p className="text-sm text-text-muted">{v.note}</p>
-              <p className="text-sm italic text-text-muted">
-                URL folgt — wird von Annika ergänzt.
-              </p>
+            <li key={v.label}>
+              <a
+                href={v.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between gap-4 py-5 transition-colors hover:text-accent"
+              >
+                <span className="flex flex-col gap-1">
+                  <span
+                    className="font-display text-text group-hover:text-accent"
+                    style={{
+                      fontSize: "1.25rem",
+                      fontVariationSettings: "'opsz' 60",
+                    }}
+                  >
+                    {v.label}
+                  </span>
+                  <span className="text-sm text-text-muted">{v.note}</span>
+                </span>
+                <ArrowUpRight size={18} aria-hidden className="shrink-0" />
+              </a>
             </li>
           ))}
         </ul>

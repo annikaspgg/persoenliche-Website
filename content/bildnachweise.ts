@@ -21,19 +21,21 @@ export const bildnachweise: Bildnachweis[] = [
   {
     usage: "Startseite — Hero (Geige)",
     description:
-      "Annika Spegg am Pult mit grünem Samtkleid, Konzertflügel im Hintergrund.",
+      "Annika Spegg im Profil mit Geige in grünem Samt-Oberteil, Konzertflügel im Hintergrund.",
     file: "hero-geige.webp",
     photographer: TBD,
   },
   {
     usage: "Startseite — Hero (Dramaturgie)",
-    description: "Bühnensituation mit Mikrofon beim HUGO-Wettbewerb.",
+    description:
+      "Annika Spegg mit Mikrofon und Skript auf der Bühne, im Halbprofil.",
     file: "hero-dramaturgie.webp",
     photographer: TBD,
   },
   {
     usage: "Startseite — Hero (Performance)",
-    description: "Annika Spegg in rotem und blauem Bühnenlicht.",
+    description:
+      "Annika Spegg in einer Performance mit Schmetterling-Kostüm und Mikrofon, vor einer Lichtinstallation.",
     file: "hero-performance.webp",
     photographer: TBD,
   },
@@ -58,22 +60,32 @@ export const bildnachweise: Bildnachweis[] = [
     photographer: TBD,
   },
 
+  // — Vita —
+  {
+    usage: "Vita — Skulpturensaal",
+    description:
+      "Annika Spegg im Profil vor einer Büste auf schwarzem Sockel im Skulpturensaal.",
+    file: "vita-skulptur.webp",
+    photographer: TBD,
+  },
+
   // — Aktuelles —
   {
-    usage: "Startseite — Aktuelles",
+    usage: "Startseite — Aktuelles (Gruppenbild)",
     description:
-      "Faust.Margarete // GRETCHEN WANTS A FULL STORY — Pressefoto folgt.",
-    file: "aktuelles-gretchen.webp",
+      "Faust.Margarete // GRETCHEN WANTS A FULL STORY — Ensembleporträt der vier Performerinnen.",
+    file: "aktuelles-gretchen.jpg",
+    photographer: TBD,
+  },
+  {
+    usage: "Startseite — Aktuelles (Flyer)",
+    description:
+      "Platzhalter — Veranstaltungs-Flyer Faust.Margarete (echtes Bild folgt).",
+    file: "aktuelles-flyer.svg",
     photographer: TBD,
   },
 
   // — Vergangenes / Projekte —
-  {
-    usage: "Vergangenes — Faust.Margarete (2026)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "gretchen-wants-a-full-story-{main,01,02}.webp",
-    photographer: TBD,
-  },
   {
     usage: "Vergangenes — Rat der Generationen (2025)",
     description: "Hauptbild + zwei Galeriebilder.",
@@ -87,15 +99,63 @@ export const bildnachweise: Bildnachweis[] = [
     photographer: TBD,
   },
   {
+    usage: "Vergangenes — Jubiläumskonzert Freiburg (2025)",
+    description: "Hauptbild + zwei Galeriebilder.",
+    file: "jubilaeumskonzert-freiburg-{main,01,02}.webp",
+    photographer: TBD,
+  },
+  {
     usage: "Vergangenes — Duo Zwischen / HUGO-Wettbewerb (2025)",
     description: "Hauptbild + zwei Galeriebilder.",
     file: "duo-zwischen-hugo-wettbewerb-{main,01,02}.webp",
     photographer: TBD,
   },
   {
+    usage: "Vergangenes — Wanderer, es gibt keinen Weg (2025/2026)",
+    description: "Hauptbild + zwei Galeriebilder.",
+    file: "wanderer-es-gibt-keinen-weg-{main,01,02}.webp",
+    photographer: TBD,
+  },
+  {
     usage: "Vergangenes — KommentarTheater (2024)",
     description: "Hauptbild + zwei Galeriebilder.",
     file: "kommentar-theater-{main,01,02}.webp",
+    photographer: TBD,
+  },
+  {
+    usage: "Vergangenes — In solchen Bildern ist des Menschen Tag beschrieben (2023)",
+    description: "Hauptbild + zwei Galeriebilder.",
+    file: "in-solchen-bildern-des-menschen-tag-{main,01,02}.webp",
+    photographer: TBD,
+  },
+  {
+    usage: "Vergangenes — Klimabühne Transparente Welten (2023)",
+    description: "Hauptbild + zwei Galeriebilder.",
+    file: "klimabuehne-transparente-welten-{main,01,02}.webp",
+    photographer: TBD,
+  },
+  {
+    usage: "Vergangenes — Klimabühne Der Preis ist heiß (2023)",
+    description: "Hauptbild + zwei Galeriebilder.",
+    file: "klimabuehne-preis-ist-heiss-{main,01,02}.webp",
+    photographer: TBD,
+  },
+  {
+    usage: "Vergangenes — Drei Leseperformances (2022)",
+    description: "Hauptbild + zwei Galeriebilder.",
+    file: "drei-leseperformances-{main,01,02}.webp",
+    photographer: TBD,
+  },
+  {
+    usage: "Vergangenes — Primadonna 2.0 (2021)",
+    description: "Hauptbild + zwei Galeriebilder.",
+    file: "primadonna-2-0-{main,01,02}.webp",
+    photographer: TBD,
+  },
+  {
+    usage: "Vergangenes — Junge Oper Baden-Württemberg (2021)",
+    description: "Hauptbild + zwei Galeriebilder.",
+    file: "junge-oper-baden-wuerttemberg-{main,01,02}.webp",
     photographer: TBD,
   },
 

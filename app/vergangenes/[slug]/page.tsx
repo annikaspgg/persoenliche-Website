@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { allProjectSlugs, getProjectBySlug } from "@/content/projects";
 import { pageMetadata } from "@/lib/metadata";
+import { strikeFaust } from "@/lib/text";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -22,7 +23,8 @@ export async function generateMetadata(
   if (!project) return pageMetadata("Projekt nicht gefunden");
   return pageMetadata(
     project.meta.title,
-    `${project.meta.year} · ${project.meta.role.join(", ")}`,
+    `${project.meta.year} · ${project.meta.role.join(", ")} · Annika Spegg.`,
+    { path: `/vergangenes/${slug}` },
   );
 }
 
@@ -64,7 +66,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             lineHeight: 1.05,
           }}
         >
-          {meta.title}
+          {strikeFaust(meta.title)}
         </h1>
 
         {meta.role.length > 0 && (
