@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Platzhalter Performance">
+  <defs>
+    <pattern id="p" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="25" r="6" fill="#b8aa92"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1600" fill="#cfc3a9"/>
+  <rect width="2400" height="1600" fill="url(#p)" opacity="0.45"/>
+  <text x="1200" y="800" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="84" fill="#4a4438" letter-spacing="0.02em">hero-performance.webp</text>
+  <text x="1200" y="900" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="52" fill="#6c6557" letter-spacing="0.18em">[ PLATZHALTER ]</text>
+</svg>

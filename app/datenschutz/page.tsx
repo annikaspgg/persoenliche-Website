@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = pageMetadata(
-  "Datenschutz",
-  "Datenschutz auf annikaspegg.de — keine Cookies, kein Tracking, kein Newsletter. Hinweise zu Vercel-Hosting und DSGVO-Rechten.",
-  { path: "/datenschutz" },
-);
+export const metadata: Metadata = pageMetadata("Datenschutz");
 
 const STAND = "Mai 2026";
 
@@ -33,19 +29,14 @@ export default function DatenschutzPage() {
         <h2 className="mb-4 font-display text-2xl text-text" style={{ fontVariationSettings: "'opsz' 60" }}>
           Verantwortliche
         </h2>
-        <p className="text-[1.0625rem] leading-[1.6] text-text">
-          Annika Spegg<br />
-          Mockauer Str. 77<br />
-          04357 Leipzig
+        <p className="mb-2 text-[1.0625rem] leading-[1.6] text-text">
+          Annika Spegg
         </p>
-        <p className="mt-3 text-[1.0625rem] leading-[1.6] text-text">
-          E-Mail:{" "}
-          <a
-            href="mailto:annika.spegg@posteo.de"
-            className="text-accent underline decoration-1 underline-offset-4 hover:text-accent-hover"
-          >
-            annika.spegg@posteo.de
-          </a>
+        <p className="text-[1.0625rem] leading-[1.6] text-text-muted">
+          [ADRESSE — wird vor Launch ergänzt]
+        </p>
+        <p className="mt-2 text-[1.0625rem] leading-[1.6] text-text">
+          E-Mail: <span className="text-text-muted">[EMAIL — wird vor Launch ergänzt]</span>
         </p>
       </section>
 

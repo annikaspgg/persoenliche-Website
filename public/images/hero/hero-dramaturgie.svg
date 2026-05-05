@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Platzhalter Dramaturgie">
+  <defs>
+    <pattern id="d" width="80" height="80" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="40" x2="80" y2="40" stroke="#cfc7b8" stroke-width="2"/>
+      <line x1="40" y1="0" x2="40" y2="80" stroke="#cfc7b8" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="2400" height="1600" fill="#dcd5c5"/>
+  <rect width="2400" height="1600" fill="url(#d)" opacity="0.55"/>
+  <text x="1200" y="800" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="84" fill="#5a554c" letter-spacing="0.02em">hero-dramaturgie.webp</text>
+  <text x="1200" y="900" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="52" fill="#7a7466" letter-spacing="0.18em">[ PLATZHALTER ]</text>
+</svg>

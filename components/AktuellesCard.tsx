@@ -1,18 +1,13 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 import { meta as rawMeta } from "@/content/aktuelles.mdx";
-import { strikeFaust } from "@/lib/text";
 
 type AktuellesMeta = {
   title: string;
   image: string;
   imageAlt: string;
-  flyer?: string;
-  flyerAlt?: string;
   role?: string;
-  paragraphs: string[];
-  cast?: string;
-  links?: Array<{ href: string; label: string }>;
+  description: string;
+  link?: { href: string; label: string };
   dates: Array<{ date: string; venue: string; city?: string }>;
 };
 
@@ -47,33 +42,19 @@ export function AktuellesCard() {
         </h2>
 
         <article className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
-          {/* Linke Spalte: Gruppenbild oben, Flyer darunter */}
-          <div className="flex flex-col gap-6 md:col-span-5">
-            <div className="relative aspect-[2/3] overflow-hidden rounded-[8px] bg-bg-muted">
+          <div className="md:col-span-7">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] bg-bg-muted">
               <Image
                 src={meta.image}
                 alt={meta.imageAlt}
                 fill
-                sizes="(max-width: 768px) 100vw, 40vw"
+                sizes="(max-width: 768px) 100vw, 60vw"
                 className="object-cover"
               />
             </div>
-
-            {meta.flyer && (
-              <div className="relative aspect-[2/3] overflow-hidden rounded-[8px] bg-bg-muted">
-                <Image
-                  src={meta.flyer}
-                  alt={meta.flyerAlt ?? "Flyer"}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-            )}
           </div>
 
-          {/* Rechte Spalte: Titel, Beschreibung, Mit, Termine, Tickets */}
-          <div className="md:col-span-7 md:pt-2">
+          <div className="md:col-span-5 md:pt-2">
             <h3
               className="font-display text-text"
               style={{
@@ -82,24 +63,16 @@ export function AktuellesCard() {
                 lineHeight: 1.15,
               }}
             >
-              {strikeFaust(meta.title)}
+              {meta.title}
             </h3>
 
             {meta.role && (
               <p className="mt-3 text-sm text-text-muted">{meta.role}</p>
             )}
 
-            <div className="mt-8 space-y-5 text-[1.0625rem] leading-[1.6] text-text">
-              {meta.paragraphs.map((p, i) => (
-                <p key={i}>{strikeFaust(p)}</p>
-              ))}
-            </div>
-
-            {meta.cast && (
-              <p className="mt-6 text-[0.9375rem] text-text-muted">
-                <span className="font-medium text-text">Mit:</span> {meta.cast}
-              </p>
-            )}
+            <p className="mt-6 text-[1.0625rem] leading-[1.6] text-text">
+              {meta.description}
+            </p>
 
             <ul className="mt-8 space-y-2 border-t border-border pt-6 text-[0.9375rem] text-text-muted">
               {meta.dates.map((d) => (
@@ -115,22 +88,15 @@ export function AktuellesCard() {
               ))}
             </ul>
 
-            {meta.links && meta.links.length > 0 && (
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
-                {meta.links.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-accent underline decoration-1 underline-offset-4 transition-colors hover:text-accent-hover"
-                    >
-                      {link.label}
-                      <ArrowUpRight size={14} aria-hidden />
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            {meta.link && (
+              <a
+                href={meta.link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-block text-accent underline decoration-1 underline-offset-4 transition-colors hover:text-accent-hover"
+              >
+                {meta.link.label} ↗
+              </a>
             )}
           </div>
         </article>

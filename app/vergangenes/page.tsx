@@ -5,8 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata(
   "Vergangenes",
-  "Projektarchiv von Annika Spegg: Musiktheater, Konzerte und Performances zwischen 2021 und 2026 — von Don Giovanni bis Faust.Margarete.",
-  { path: "/vergangenes" },
+  "Projektarchiv von Annika Spegg — Musiktheater, Konzerte und Performances.",
 );
 
 export default function VergangenesPage() {

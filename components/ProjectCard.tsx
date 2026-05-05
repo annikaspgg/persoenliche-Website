@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ProjectMeta } from "@/lib/projects";
-import { strikeFaust } from "@/lib/text";
 
 type Props = {
   project: ProjectMeta;
@@ -34,7 +33,7 @@ export function ProjectCard({ project }: Props) {
               lineHeight: 1.2,
             }}
           >
-            {strikeFaust(project.title)}
+            {project.title}
           </h2>
 
           {project.role.length > 0 && (

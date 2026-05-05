@@ -37,35 +37,16 @@ export const defaultMetadata: Metadata = {
   },
 };
 
-/** Static reference to the dynamically generated /opengraph-image route */
-const ogImage = {
-  url: "/opengraph-image",
-  width: 1200,
-  height: 630,
-  alt: "Annika Spegg — Geige, Dramaturgie, Performance",
-};
-
 export function pageMetadata(
   title: string,
   description?: string,
-  options?: { path?: string },
 ): Metadata {
-  const desc = description ?? siteConfig.description;
-  const url = options?.path ? `${siteConfig.url}${options.path}` : undefined;
   return {
     title,
-    description: desc,
-    alternates: url ? { canonical: url } : undefined,
+    description: description ?? siteConfig.description,
     openGraph: {
       title: `${title} — ${siteConfig.name}`,
-      description: desc,
-      url,
-      images: [ogImage],
-    },
-    twitter: {
-      title: `${title} — ${siteConfig.name}`,
-      description: desc,
-      images: [ogImage],
+      description: description ?? siteConfig.description,
     },
   };
 }

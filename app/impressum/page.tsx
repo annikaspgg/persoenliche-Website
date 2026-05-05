@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = pageMetadata(
-  "Impressum",
-  "Impressum von annikaspegg.de — Anbieterkennzeichnung gemäß §5 TMG sowie Hinweise zu Haftung und Urheberrecht.",
-  { path: "/impressum" },
-);
+export const metadata: Metadata = pageMetadata("Impressum");
 
 export default function ImpressumPage() {
   return (
@@ -26,9 +22,10 @@ export default function ImpressumPage() {
           Angaben gemäß §5 TMG
         </h2>
         <p className="mb-2 text-[1.0625rem] leading-[1.6] text-text">
-          Annika Spegg<br />
-          Mockauer Str. 77<br />
-          04357 Leipzig
+          Annika Spegg
+        </p>
+        <p className="text-[1.0625rem] leading-[1.6] text-text-muted">
+          [ADRESSE — wird vor Launch ergänzt]
         </p>
       </section>
 
@@ -37,13 +34,7 @@ export default function ImpressumPage() {
           Kontakt
         </h2>
         <p className="text-[1.0625rem] leading-[1.6] text-text">
-          E-Mail:{" "}
-          <a
-            href="mailto:annika.spegg@posteo.de"
-            className="text-accent underline decoration-1 underline-offset-4 hover:text-accent-hover"
-          >
-            annika.spegg@posteo.de
-          </a>
+          E-Mail: <span className="text-text-muted">[EMAIL — wird vor Launch ergänzt]</span>
         </p>
       </section>
 
@@ -51,10 +42,11 @@ export default function ImpressumPage() {
         <h2 className="mb-4 font-display text-2xl text-text" style={{ fontVariationSettings: "'opsz' 60" }}>
           Verantwortlich für den Inhalt nach §55 Abs. 2 RStV
         </h2>
-        <p className="text-[1.0625rem] leading-[1.6] text-text">
-          Annika Spegg<br />
-          Mockauer Str. 77<br />
-          04357 Leipzig
+        <p className="mb-2 text-[1.0625rem] leading-[1.6] text-text">
+          Annika Spegg
+        </p>
+        <p className="text-[1.0625rem] leading-[1.6] text-text-muted">
+          [ADRESSE — wie oben]
         </p>
       </section>
 

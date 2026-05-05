@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Platzhalter Performance (klein)">
+  <defs>
+    <pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="5" fill="#b8aa92"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1500" fill="#cfc3a9"/>
+  <rect width="1200" height="1500" fill="url(#p)" opacity="0.45"/>
+  <text x="600" y="730" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="50" fill="#4a4438">home-performance.webp</text>
+  <text x="600" y="800" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" fill="#6c6557" letter-spacing="0.18em">[ PLATZHALTER ]</text>
+</svg>

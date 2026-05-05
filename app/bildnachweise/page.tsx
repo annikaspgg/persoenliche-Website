@@ -4,8 +4,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata(
   "Bildnachweise",
-  "Bildnachweise: Verzeichnis aller auf annikaspegg.de verwendeten Fotos mit Verwendungsort und Fotograf:innen.",
-  { path: "/bildnachweise" },
+  "Verzeichnis aller auf der Website verwendeten Fotos mit Fotograf:innen-Angaben.",
 );
 
 export default function BildnachweisePage() {

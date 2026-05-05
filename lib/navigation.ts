@@ -8,7 +8,7 @@ export const mainNav = [
 export type MainNavItem = (typeof mainNav)[number];
 
 export const contact = {
-  email: "annika.spegg@posteo.de",
+  email: "kontakt@annikaspegg.de", // TODO: vor Launch durch echte Adresse ersetzen
   instagram: "https://instagram.com/annika_spgg",
   duoZwischen: "https://duozwischen.de",
 } as const;

@@ -14,66 +14,50 @@ type ImageEntry = {
   alt: string;
   width: number;
   height: number;
-  /**
-   * CSS object-position für object-cover Crops. Default: "center".
-   * Beispiele: "center", "right center", "50% 30%".
-   */
-  position?: string;
 };
 
 export const heroImages: Record<Feld, ImageEntry> = {
   geige: {
-    src: "/images/hero/hero-geige.webp",
+    src: "/images/hero/hero-geige.svg",
     alt:
-      "Annika Spegg im Profil mit Geige in grünem Samt-Oberteil, Konzertflügel im Hintergrund.",
-    width: 1600,
-    height: 1066,
-    // Landscape-Quelle, fits den breiten Hero gut — leichter Bias nach rechts hält Annika zentriert.
-    position: "60% center",
+      "Annika Spegg am Pult mit grünem Samtkleid, Konzertflügel im Hintergrund — Hero-Bild für den Bereich Geige.",
+    width: 2400,
+    height: 1600,
   },
   dramaturgie: {
-    src: "/images/hero/hero-dramaturgie.webp",
+    src: "/images/hero/hero-dramaturgie.svg",
     alt:
-      "Annika Spegg mit Mikrofon und Skript auf der Bühne, im Halbprofil — dramaturgische Bühnensituation.",
-    width: 1067,
+      "Bühnensituation mit Mikrofon und gesetztem Licht beim HUGO-Wettbewerb — Hero-Bild für den Bereich Dramaturgie.",
+    width: 2400,
     height: 1600,
-    // Portrait-Quelle in landscape-Hero: Gesicht liegt im oberen Drittel der Quelle.
-    // "center 25%" hält Annikas Gesicht klar im sichtbaren Ausschnitt.
-    position: "center 25%",
   },
   performance: {
-    src: "/images/hero/hero-performance.webp",
+    src: "/images/hero/hero-performance.svg",
     alt:
-      "Annika Spegg in einer Performance mit Schmetterling-Kostüm und Mikrofon, vor einer Lichtinstallation.",
-    width: 1065,
+      "Annika Spegg in einer Performance, gesetzt in rotem und blauem Bühnenlicht — Hero-Bild für den Bereich Performance.",
+    width: 2400,
     height: 1600,
-    // Portrait-Quelle: Crop bei 40 % — Kopf und Mikrofon zentral im sichtbaren Bereich,
-    // unten bleibt etwas Bühne/Boden erhalten.
-    position: "center 40%",
   },
 };
 
 export const homeImages: Record<Feld, ImageEntry> = {
   geige: {
-    // Quellbild ist landscape 3:2 — wird per object-cover in den 4:5-Container geschnitten.
-    // Annika steht rechts der Bildmitte; "65% center" hält sie und die Geige im sichtbaren Ausschnitt.
-    src: "/images/home/home-geige.jpg",
-    alt: "Annika Spegg spielt Geige in grünem Samt-Oberteil bei einem Kammerkonzert, links ein Pianist am Flügel.",
-    width: 1600,
-    height: 1066,
-    position: "65% center",
+    src: "/images/home/home-geige.svg",
+    alt: "Sommerportrait von Annika Spegg mit Geige.",
+    width: 1200,
+    height: 1500,
   },
   dramaturgie: {
-    src: "/images/home/home-dramaturgie.jpg",
-    alt: "Annika Spegg in einer dramaturgischen Bühnensituation: mit Skript und Mikrofon, im Dialog mit einer Performerin auf einer Leiter.",
-    width: 1067,
-    height: 1600,
+    src: "/images/home/home-dramaturgie.svg",
+    alt: "Mikrofon und Skript auf einem Tisch — Arbeitssituation Dramaturgie.",
+    width: 1200,
+    height: 1500,
   },
   performance: {
-    src: "/images/home/home-performance.jpg",
-    alt: "Annika Spegg in einer Performance mit Schmetterling-Kostüm und Mikrofon, vor einer Lichtinstallation.",
-    width: 1065,
-    height: 1600,
+    src: "/images/home/home-performance.svg",
+    alt: "Annika Spegg in einem Schmetterling-Kostüm bei einer Performance.",
+    width: 1200,
+    height: 1500,
   },
 };
 
