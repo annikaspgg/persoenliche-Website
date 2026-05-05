@@ -1,5 +1,17 @@
 import Image from "next/image";
-import { meta } from "@/content/aktuelles.mdx";
+import { meta as rawMeta } from "@/content/aktuelles.mdx";
+
+type AktuellesMeta = {
+  title: string;
+  image: string;
+  imageAlt: string;
+  role?: string;
+  description: string;
+  link?: { href: string; label: string };
+  dates: Array<{ date: string; venue: string; city?: string }>;
+};
+
+const meta = rawMeta as AktuellesMeta;
 
 const dateFormatter = new Intl.DateTimeFormat("de-DE", {
   day: "2-digit",

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Platzhalter Rat der Generationen (02)">
+  <defs>
+    <pattern id="p" width="80" height="80" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="40" x2="80" y2="40" stroke="#5a6e54" stroke-width="2" opacity="0.35"/>
+      <line x1="40" y1="0" x2="40" y2="80" stroke="#5a6e54" stroke-width="2" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="#dfe3da"/>
+  <rect width="1200" height="900" fill="url(#p)"/>
+  <text x="600" y="396" text-anchor="middle" dominant-baseline="middle" font-family="ui-serif, Georgia, serif" font-size="37" fill="#3a3530">Rat der Generationen</text>
+  <text x="600" y="454" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="54" fill="#5a554c">rat-der-generationen-02.webp</text>
+  <text x="600" y="533" text-anchor="middle" dominant-baseline="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="29" fill="#7a7466" letter-spacing="0.2em">[ PLATZHALTER ]</text>
+</svg>
