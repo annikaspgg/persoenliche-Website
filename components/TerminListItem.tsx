@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { strikeFaust } from "@/lib/text";
 
 export type Termin = {
   date: string;
@@ -72,7 +73,7 @@ export function TerminListItem({ termin, dimmed = false }: Props) {
                   lineHeight: 1.2,
                 }}
               >
-                {termin.title}
+                {strikeFaust(termin.title)}
               </h2>
 
               <p className="mt-2 text-[1rem] text-text">

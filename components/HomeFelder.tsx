@@ -19,7 +19,15 @@ const feldText: Record<Feld, string> = {
     "Als Performerin trete ich in eigenen und fremden (Musik-)Theaterstücken und Performances auf. Häufig reflektiere ich dabei meine Wurzeln aus der klassischen Musik — etwa in meiner Durational Solo Performance In solchen Bildern ist des Menschen Tag vollendet (Stuttgart 2023).",
 };
 
-export function HomeFelder() {
+type Props = {
+  /**
+   * Blendet pro Karte den "Mehr in der Vita"-Link ein. Default: true.
+   * Auf der Vita-Seite selbst wird der Link ausgeblendet (würde sonst auf sich selbst zeigen).
+   */
+  showVitaLink?: boolean;
+};
+
+export function HomeFelder({ showVitaLink = true }: Props = {}) {
   return (
     <section
       aria-label="Geige, Dramaturgie, Performance"
@@ -42,6 +50,7 @@ export function HomeFelder() {
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
+                    style={img.position ? { objectPosition: img.position } : undefined}
                   />
                 </div>
 
@@ -60,12 +69,14 @@ export function HomeFelder() {
                   {feldText[feld]}
                 </p>
 
-                <Link
-                  href="/vita"
-                  className="text-[0.9375rem] text-accent underline decoration-1 underline-offset-4 transition-colors hover:text-accent-hover"
-                >
-                  Mehr in der Vita
-                </Link>
+                {showVitaLink && (
+                  <Link
+                    href="/vita"
+                    className="text-[0.9375rem] text-accent underline decoration-1 underline-offset-4 transition-colors hover:text-accent-hover"
+                  >
+                    Mehr in der Vita
+                  </Link>
+                )}
               </article>
             );
           })}

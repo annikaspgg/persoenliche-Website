@@ -5,7 +5,8 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata(
   "Coming Up",
-  "Kommende Termine und Aufführungen von Annika Spegg.",
+  "Kommende Konzerte und Aufführungen von Annika Spegg: Streichquartett, Faust.Margarete und neue Opernarbeiten in Leipzig, Stuttgart und Frankfurt.",
+  { path: "/coming-up" },
 );
 
 const termine = comingUpData as Termin[];
