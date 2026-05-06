@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata(
 export default function VitaPage() {
   return (
     <>
-      {/* Heading + Fließtext in 680-px-Spalte */}
+      {/* Heading + Fließtext in 680-px-Spalte; Bild rechts oben (Magazin-Layout) */}
       <section className="mx-auto max-w-[680px] px-6 pt-24 md:pt-32">
         <h1
           className="mb-12 font-display text-text"
@@ -29,23 +29,27 @@ export default function VitaPage() {
           Vita
         </h1>
 
-        <div>
-          <VitaContent />
-        </div>
-      </section>
-
-      {/* Vollbreiten-Bild — Annika im Skulpturensaal */}
-      <section className="mx-auto mt-20 max-w-7xl px-6 md:mt-28 md:px-12 lg:px-20">
-        <figure className="relative mx-auto aspect-[3/4] max-w-2xl overflow-hidden rounded-[8px] bg-bg-muted md:aspect-[4/3] md:max-w-none">
+        {/*
+          Mobile: kompakt zentriert über dem Text.
+          Desktop (≥ md): float-right, fester Breite, der Fließtext läuft links vorbei.
+        */}
+        <figure className="relative mx-auto mb-6 aspect-[3/4] w-2/3 max-w-[260px] overflow-hidden rounded-[8px] bg-bg-muted md:float-right md:mx-0 md:mb-4 md:ml-8 md:w-[260px] md:max-w-none">
           <Image
             src="/images/vita/vita-skulptur.webp"
             alt="Annika Spegg im Skulpturensaal, im Profil vor einer Büste auf schwarzem Sockel."
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px"
+            sizes="(max-width: 768px) 60vw, 260px"
             className="object-cover"
             style={{ objectPosition: "center 30%" }}
           />
         </figure>
+
+        <div>
+          <VitaContent />
+        </div>
+
+        {/* Float am Ende der Spalte sauber abschließen */}
+        <div className="clear-both" />
       </section>
 
       {/* Strukturierter Lebenslauf nach Feldern */}
