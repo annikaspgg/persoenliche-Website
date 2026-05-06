@@ -154,8 +154,11 @@ export function HeroHover() {
                 <div className="absolute inset-0 bg-bg/30" />
                 <div className="absolute inset-0 flex items-end p-5">
                   <span
-                    className="font-display text-3xl text-text"
-                    style={{ fontVariationSettings: "'opsz' 72" }}
+                    className="font-display text-3xl text-bg"
+                    style={{
+                      fontVariationSettings: "'opsz' 72",
+                      textShadow: GLOW_SHADOW,
+                    }}
                   >
                     {feldLabel[feld]}
                   </span>
