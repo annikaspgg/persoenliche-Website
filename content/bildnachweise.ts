@@ -71,17 +71,24 @@ export const bildnachweise: Bildnachweis[] = [
 
   // — Aktuelles —
   {
-    usage: "Startseite — Aktuelles (Gruppenbild)",
+    usage: "Startseite — Aktuelles (Slideshow 1: Ensemble)",
     description:
       "Faust.Margarete // GRETCHEN WANTS A FULL STORY — Ensembleporträt der vier Performerinnen.",
     file: "aktuelles-gretchen.jpg",
     photographer: TBD,
   },
   {
-    usage: "Startseite — Aktuelles (Flyer)",
+    usage: "Startseite — Aktuelles (Slideshow 2: Probenfoto)",
     description:
-      "Platzhalter — Veranstaltungs-Flyer Faust.Margarete (echtes Bild folgt).",
-    file: "aktuelles-flyer.svg",
+      "Performerin mit Schwangerschafts-Prothese vor Graffiti-Wand — Probenfoto Faust.Margarete.",
+    file: "aktuelles-gretchen-2.webp",
+    photographer: TBD,
+  },
+  {
+    usage: "Startseite — Aktuelles (Slideshow 3: Flyer)",
+    description:
+      "Veranstaltungs-Flyer Faust.Margarete // GRETCHEN WANTS A FULL STORY mit historischen und zeitgenössischen Gretchen-Bildern.",
+    file: "aktuelles-gretchen-3.webp",
     photographer: TBD,
   },
 

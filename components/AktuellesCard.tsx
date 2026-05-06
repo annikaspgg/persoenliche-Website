@@ -1,14 +1,11 @@
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { meta as rawMeta } from "@/content/aktuelles.mdx";
 import { strikeFaust } from "@/lib/text";
+import { AktuellesSlideshow } from "./AktuellesSlideshow";
 
 type AktuellesMeta = {
   title: string;
-  image: string;
-  imageAlt: string;
-  flyer?: string;
-  flyerAlt?: string;
+  images: Array<{ src: string; alt: string }>;
   role?: string;
   paragraphs: string[];
   cast?: string;
@@ -47,29 +44,9 @@ export function AktuellesCard() {
         </h2>
 
         <article className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
-          {/* Linke Spalte: Gruppenbild oben, Flyer darunter */}
-          <div className="flex flex-col gap-6 md:col-span-5">
-            <div className="relative aspect-[2/3] overflow-hidden rounded-[8px] bg-bg-muted">
-              <Image
-                src={meta.image}
-                alt={meta.imageAlt}
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover"
-              />
-            </div>
-
-            {meta.flyer && (
-              <div className="relative aspect-[2/3] overflow-hidden rounded-[8px] bg-bg-muted">
-                <Image
-                  src={meta.flyer}
-                  alt={meta.flyerAlt ?? "Flyer"}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-            )}
+          {/* Linke Spalte: Slideshow */}
+          <div className="md:col-span-5">
+            <AktuellesSlideshow slides={meta.images} />
           </div>
 
           {/* Rechte Spalte: Titel, Beschreibung, Mit, Termine, Tickets */}
