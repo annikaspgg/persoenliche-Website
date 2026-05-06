@@ -16,6 +16,9 @@ import { cn } from "@/lib/utils";
 // rgba aus --text (#1A1815) — passt zur warmen Markenpalette besser als reines Schwarz.
 const GLOW_SHADOW =
   "0 0 14px rgba(26, 24, 21, 0.9), 0 0 28px rgba(26, 24, 21, 0.55)";
+// Mobile-Karten brauchen einen kräftigeren Glow, weil dort kein dunkler Tint über dem Bild liegt.
+const GLOW_SHADOW_MOBILE =
+  "0 0 6px rgba(26, 24, 21, 1), 0 0 16px rgba(26, 24, 21, 0.95), 0 0 36px rgba(26, 24, 21, 0.8)";
 const GLOW_TRANSITION =
   "text-shadow 800ms ease-in-out, color 200ms ease-in-out";
 
@@ -157,7 +160,7 @@ export function HeroHover() {
                     className="font-display text-3xl text-bg"
                     style={{
                       fontVariationSettings: "'opsz' 72",
-                      textShadow: GLOW_SHADOW,
+                      textShadow: GLOW_SHADOW_MOBILE,
                     }}
                   >
                     {feldLabel[feld]}
