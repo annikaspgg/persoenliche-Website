@@ -35,7 +35,7 @@ export const bildnachweise: Bildnachweis[] = [
   {
     usage: "Startseite — Hero (Performance)",
     description:
-      "Annika Spegg in einer Performance mit Schmetterling-Kostüm und Mikrofon, vor einer Lichtinstallation.",
+      "Annika Spegg spielt Geige in silbernem Kostüm, von rotem und blauem Bühnenlicht angestrahlt.",
     file: "hero-performance.webp",
     photographer: TBD,
   },
@@ -44,19 +44,20 @@ export const bildnachweise: Bildnachweis[] = [
   {
     usage: "Startseite — Mini-Text Geige",
     description: "Sommerportrait von Annika Spegg mit Geige.",
-    file: "home-geige.webp",
+    file: "home-geige.jpg",
     photographer: TBD,
   },
   {
     usage: "Startseite — Mini-Text Dramaturgie",
     description: "Mikrofon und Skript auf einem Tisch.",
-    file: "home-dramaturgie.webp",
+    file: "home-dramaturgie.jpg",
     photographer: TBD,
   },
   {
     usage: "Startseite — Mini-Text Performance",
-    description: "Annika Spegg im Schmetterling-Kostüm bei einer Performance.",
-    file: "home-performance.webp",
+    description:
+      "Annika Spegg spielt Geige in silbernem Kostüm, von rotem und blauem Bühnenlicht angestrahlt.",
+    file: "home-performance.jpg",
     photographer: TBD,
   },
 
