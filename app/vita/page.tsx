@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Download } from "lucide-react";
 import VitaContent from "@/content/vita.mdx";
 import { Button } from "@/components/ui/Button";
-import { HomeFelder } from "@/components/HomeFelder";
 import { VitaStations } from "@/components/VitaStations";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -73,9 +72,6 @@ export default function VitaPage() {
       <div className="mt-10 md:mt-14">
         <VitaStations />
       </div>
-
-      {/* Drei Felder — Geige · Dramaturgie · Performance, Texte 1:1 von Startseite */}
-      <HomeFelder showVitaLink={false} />
 
       {/* Abschluss: Kurzvita-PDF */}
       <section className="mx-auto max-w-[680px] px-6 pb-24 md:pb-32">
