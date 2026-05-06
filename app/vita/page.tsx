@@ -40,7 +40,11 @@ export default function VitaPage() {
             fill
             sizes="(max-width: 768px) 60vw, 260px"
             className="object-cover"
-            style={{ objectPosition: "center 75%", transform: "scale(1.15)" }}
+            style={{
+              objectPosition: "center",
+              transform: "scale(1.15)",
+              transformOrigin: "center bottom",
+            }}
           />
         </figure>
 
