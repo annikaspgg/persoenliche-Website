@@ -35,7 +35,7 @@ export const bildnachweise: Bildnachweis[] = [
   {
     usage: "Startseite — Hero (Performance)",
     description:
-      "Annika Spegg spielt Geige in silbernem Kostüm, von rotem und blauem Bühnenlicht angestrahlt.",
+      "Annika Spegg in silbernem Bodysuit mit lila-rosa Schmetterlingsflügeln, sitzt mit Mikrofon auf einer Holzbühne vor warmem Spotlight.",
     file: "hero-performance.webp",
     photographer: TBD,
   },

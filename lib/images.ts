@@ -44,10 +44,10 @@ export const heroImages: Record<Feld, ImageEntry> = {
   performance: {
     src: "/images/hero/hero-performance.webp",
     alt:
-      "Annika Spegg in einer Performance: spielt Geige in einem silbernen Kostüm vor dunklem Bühnenhintergrund, von rotem und blauem Licht angestrahlt.",
-    width: 1067,
+      "Annika Spegg in einer Performance: silbernes Bodysuit mit lila-rosa Schmetterlingsflügeln, sitzt mit Mikrofon auf einer Holzbühne vor warmem Spotlight.",
+    width: 1065,
     height: 1600,
-    // Portrait-Quelle: Crop bei 40 % — Gesicht und Geige zentral im sichtbaren Bereich.
+    // Portrait-Quelle: Crop bei 40 % — Gesicht und Mikrofon zentral im sichtbaren Bereich.
     position: "center 40%",
   },
 };
