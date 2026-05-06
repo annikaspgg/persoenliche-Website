@@ -57,7 +57,7 @@ export default function VitaPage() {
       </section>
 
       {/* Bild zwischen Fließtext und Stationen — gleiche Breite wie der Text oben */}
-      <section className="mx-auto mt-24 max-w-[680px] px-6 md:mt-32">
+      <section className="mx-auto mt-10 max-w-[680px] px-6 md:mt-14">
         <figure className="relative aspect-[3/2] overflow-hidden rounded-[8px] bg-bg-muted">
           <Image
             src="/images/vita/vita-bosch.webp"
@@ -70,7 +70,7 @@ export default function VitaPage() {
       </section>
 
       {/* Strukturierter Lebenslauf nach Feldern */}
-      <div className="mt-24 md:mt-32">
+      <div className="mt-10 md:mt-14">
         <VitaStations />
       </div>
 

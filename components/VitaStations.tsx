@@ -72,7 +72,7 @@ export function VitaStations() {
   return (
     <section
       aria-label="Stationen — Geige, Dramaturgie, Performance"
-      className="border-t border-border bg-bg"
+      className="bg-bg"
     >
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32 lg:px-20">
         <h2
