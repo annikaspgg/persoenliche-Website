@@ -55,9 +55,10 @@ export function Footer() {
           </nav>
         </div>
 
-        <p className="mt-10 text-[0.75rem] text-text-muted">
-          © {new Date().getFullYear()} Annika Spegg
-        </p>
+        <div className="mt-10 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 text-[0.75rem] text-text-muted">
+          <p>© {new Date().getFullYear()} Annika Spegg</p>
+          <p>Made with ♡ in Leipzig</p>
+        </div>
       </div>
     </footer>
   );
