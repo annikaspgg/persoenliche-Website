@@ -46,7 +46,7 @@ const videos = [
   {
     label: "Als Dramaturgin",
     note: "KommentarTheater",
-    url: "https://www.youtube.com/watch?v=2aCi2zae1NY",
+    url: "https://youtu.be/2aCi2zae1NY?si=87cWfDid0Zydd6mE&t=363",
   },
 ];
 
