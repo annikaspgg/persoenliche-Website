@@ -74,7 +74,7 @@ export function VitaStations() {
       aria-label="Stationen — Geige, Dramaturgie, Performance"
       className="bg-bg"
     >
-      <div className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32 lg:px-20">
+      <div className="mx-auto max-w-7xl px-6 pt-10 pb-24 md:px-12 md:pt-14 md:pb-32 lg:px-20">
         <h2
           className="font-display text-text"
           style={{

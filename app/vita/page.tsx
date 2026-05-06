@@ -69,7 +69,7 @@ export default function VitaPage() {
       </section>
 
       {/* Strukturierter Lebenslauf nach Feldern */}
-      <div className="mt-10 md:mt-14">
+      <div className="mt-4 md:mt-6">
         <VitaStations />
       </div>
 
