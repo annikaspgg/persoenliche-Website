@@ -4,6 +4,8 @@ import { Download } from "lucide-react";
 import VitaContent from "@/content/vita.mdx";
 import { Button } from "@/components/ui/Button";
 import { VitaStations } from "@/components/VitaStations";
+import { VitaSlideshow } from "@/components/VitaSlideshow";
+import { vitaGallery } from "@/content/vita-gallery";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata(
@@ -73,8 +75,16 @@ export default function VitaPage() {
         <VitaStations />
       </div>
 
+      {/* Coverflow-Bildergalerie zwischen Stationen und PDF-Button */}
+      <section
+        aria-label="Bildergalerie"
+        className="mx-auto mt-8 max-w-7xl px-6 md:mt-12 md:px-12 lg:px-20"
+      >
+        <VitaSlideshow slides={vitaGallery} />
+      </section>
+
       {/* Abschluss: Kurzvita-PDF */}
-      <section className="mx-auto max-w-[680px] px-6 pb-24 md:pb-32">
+      <section className="mx-auto mt-16 max-w-[680px] px-6 pb-24 md:mt-24 md:pb-32">
         <div className="border-t border-border pt-10">
           <Button
             as="a"

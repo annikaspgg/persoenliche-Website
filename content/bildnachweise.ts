@@ -76,6 +76,13 @@ export const bildnachweise: Bildnachweis[] = [
     file: "vita-bosch.webp",
     photographer: TBD,
   },
+  {
+    usage: "Vita — Bildergalerie (12 Slides)",
+    description:
+      "Coverflow-Slideshow zwischen Stationen und PDF-Button mit Eindrücken aus Annikas künstlerischer Arbeit.",
+    file: "gallery/gallery-{blau-haende,flosse,sommer,maske,konzertsaal,wiese-trio,hugo,gretchen,trio-backstein,wiese-kasten,handstand,bemalte-geige}.webp",
+    photographer: TBD,
+  },
 
   // — Aktuelles —
   {
