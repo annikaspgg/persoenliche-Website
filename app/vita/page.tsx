@@ -56,6 +56,19 @@ export default function VitaPage() {
         <div className="clear-both" />
       </section>
 
+      {/* Bild zwischen Fließtext und Stationen — gleiche Breite wie der Text oben */}
+      <section className="mx-auto mt-24 max-w-[680px] px-6 md:mt-32">
+        <figure className="relative aspect-[3/2] overflow-hidden rounded-[8px] bg-bg-muted">
+          <Image
+            src="/images/vita/vita-bosch.webp"
+            alt="Annika Spegg von hinten vor einem Triptychon (Weltgericht-Altar) im Museum — Paradies, Endgericht und Hölle in dunklen Grün- und Erdtönen."
+            fill
+            sizes="(max-width: 768px) 100vw, 680px"
+            className="object-cover"
+          />
+        </figure>
+      </section>
+
       {/* Strukturierter Lebenslauf nach Feldern */}
       <div className="mt-24 md:mt-32">
         <VitaStations />

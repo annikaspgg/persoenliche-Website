@@ -69,6 +69,13 @@ export const bildnachweise: Bildnachweis[] = [
     file: "vita-skulptur.webp",
     photographer: TBD,
   },
+  {
+    usage: "Vita — Triptychon im Museum",
+    description:
+      "Annika Spegg von hinten vor einem Weltgericht-Altar im Museum (Paradies, Endgericht, Hölle).",
+    file: "vita-bosch.webp",
+    photographer: TBD,
+  },
 
   // — Aktuelles —
   {
