@@ -42,10 +42,6 @@ export const vitaGallery: GallerySlide[] = [
     alt: "Annika Spegg liegt mit Geigenkasten auf einer herbstlichen Wiese.",
   },
   {
-    src: "/images/vita/gallery/gallery-handstand.webp",
-    alt: "Annika Spegg im Handstand mit gespreizten Beinen auf einem Gehweg vor einem Haus.",
-  },
-  {
     src: "/images/vita/gallery/gallery-bemalte-geige.webp",
     alt: "Bunt bemalte Geige auf einer Holzstaffelei in einem hellen Atelierraum.",
   },

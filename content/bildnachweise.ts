@@ -80,7 +80,7 @@ export const bildnachweise: Bildnachweis[] = [
     usage: "Vita — Bildergalerie (12 Slides)",
     description:
       "Coverflow-Slideshow zwischen Stationen und PDF-Button mit Eindrücken aus Annikas künstlerischer Arbeit.",
-    file: "gallery/gallery-{blau-haende,flosse,sommer,maske,konzertsaal,wiese-trio,hugo,gretchen,trio-backstein,wiese-kasten,handstand,bemalte-geige}.webp",
+    file: "gallery/gallery-{blau-haende,flosse,sommer,maske,konzertsaal,wiese-trio,hugo,gretchen,trio-backstein,wiese-kasten,bemalte-geige}.webp",
     photographer: TBD,
   },
 
