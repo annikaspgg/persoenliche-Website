@@ -1,27 +1,38 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { ProjectImage } from "@/lib/projects";
 
-type Props = { gallery: ProjectImage[] };
+type Props = {
+  mainImage: ProjectImage;
+  gallery: ProjectImage[];
+  /** Wird zwischen Hero und Galerie gerendert (Header + MDX-Body). */
+  children?: ReactNode;
+};
 
-export function ProjectGallery({ gallery }: Props) {
+export function ProjectMedia({ mainImage, gallery, children }: Props) {
+  // Hauptbild + Galerie sind eine zusammenhängende Slideshow im Lightbox-Modus.
+  const all = useMemo(() => [mainImage, ...gallery], [mainImage, gallery]);
   const [active, setActive] = useState<number | null>(null);
   const isOpen = active !== null;
 
   const close = useCallback(() => setActive(null), []);
   const prev = useCallback(() => {
-    setActive((i) =>
-      i === null ? null : (i - 1 + gallery.length) % gallery.length,
-    );
-  }, [gallery.length]);
+    setActive((i) => (i === null ? null : (i - 1 + all.length) % all.length));
+  }, [all.length]);
   const next = useCallback(() => {
-    setActive((i) => (i === null ? null : (i + 1) % gallery.length));
-  }, [gallery.length]);
+    setActive((i) => (i === null ? null : (i + 1) % all.length));
+  }, [all.length]);
 
-  // Keyboard-Navigation + Scroll-Lock, solange die Lightbox offen ist.
+  // Tastatur-Navigation + Scroll-Lock, solange die Lightbox offen ist.
   useEffect(() => {
     if (!isOpen) return;
     function handle(e: KeyboardEvent) {
@@ -47,26 +58,52 @@ export function ProjectGallery({ gallery }: Props) {
 
   return (
     <>
-      <ul className={`grid gap-4 ${gridCols}`}>
-        {gallery.map((img, i) => (
-          <li key={img.src}>
-            <button
-              type="button"
-              onClick={() => setActive(i)}
-              aria-label={`Bild vergrößern: ${img.alt}`}
-              className="group relative block aspect-[4/3] w-full overflow-hidden rounded-[8px] bg-bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-              />
-            </button>
-          </li>
-        ))}
-      </ul>
+      {/* Hero / Hauptbild — klickbar, öffnet Lightbox bei Index 0 */}
+      <button
+        type="button"
+        onClick={() => setActive(0)}
+        aria-label={`Bild vergrößern: ${mainImage.alt}`}
+        className="group relative mt-10 block aspect-[4/3] w-full overflow-hidden rounded-[8px] bg-bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent md:aspect-[16/9]"
+      >
+        <Image
+          src={mainImage.src}
+          alt={mainImage.alt}
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 1024px"
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        />
+      </button>
+
+      {children}
+
+      {gallery.length > 0 && (
+        <section
+          aria-label="Galerie"
+          className="mt-16 border-t border-border pt-12"
+        >
+          <ul className={`grid gap-4 ${gridCols}`}>
+            {gallery.map((img, i) => (
+              <li key={img.src}>
+                <button
+                  type="button"
+                  onClick={() => setActive(i + 1)}
+                  aria-label={`Bild vergrößern: ${img.alt}`}
+                  className="group relative block aspect-[4/3] w-full overflow-hidden rounded-[8px] bg-bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {isOpen && (
         <div
@@ -88,7 +125,7 @@ export function ProjectGallery({ gallery }: Props) {
             <X size={20} aria-hidden />
           </button>
 
-          {gallery.length > 1 && (
+          {all.length > 1 && (
             <>
               <button
                 type="button"
@@ -115,14 +152,13 @@ export function ProjectGallery({ gallery }: Props) {
             </>
           )}
 
-          {/* Bildfläche: nimmt den ganzen Backdrop ein, object-contain hält Aspect erhalten */}
           <div
             className="relative h-full w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={gallery[active].src}
-              alt={gallery[active].alt}
+              src={all[active].src}
+              alt={all[active].alt}
               fill
               sizes="100vw"
               className="object-contain"
@@ -130,9 +166,9 @@ export function ProjectGallery({ gallery }: Props) {
             />
           </div>
 
-          {gallery.length > 1 && (
+          {all.length > 1 && (
             <p className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-bg/90 px-3 py-1 text-xs text-text-muted">
-              {active + 1} / {gallery.length}
+              {active + 1} / {all.length}
             </p>
           )}
         </div>

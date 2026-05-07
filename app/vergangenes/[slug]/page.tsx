@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { allProjectSlugs, getProjectBySlug } from "@/content/projects";
-import { ProjectGallery } from "@/components/ProjectGallery";
+import { ProjectMedia } from "@/components/ProjectMedia";
 import { pageMetadata } from "@/lib/metadata";
 import { strikeFaust } from "@/lib/text";
 
@@ -46,56 +45,41 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         Zurück zur Übersicht
       </Link>
 
-      <div className="relative mt-10 aspect-[4/3] overflow-hidden rounded-[8px] bg-bg-muted md:aspect-[16/9]">
-        <Image
-          src={meta.mainImage.src}
-          alt={meta.mainImage.alt}
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 1024px"
-          className="object-cover"
-        />
-      </div>
+      <ProjectMedia
+        mainImage={meta.mainImage}
+        gallery={meta.gallery ?? []}
+      >
+        <header className="mt-12">
+          <p className="text-sm text-text-muted">{meta.year}</p>
+          <h1
+            className="mt-2 font-display text-text"
+            style={{
+              fontSize: "clamp(2rem, 5vw, 3.5rem)",
+              fontVariationSettings: "'opsz' 96",
+              lineHeight: 1.05,
+            }}
+          >
+            {strikeFaust(meta.title)}
+          </h1>
 
-      <header className="mt-12">
-        <p className="text-sm text-text-muted">{meta.year}</p>
-        <h1
-          className="mt-2 font-display text-text"
-          style={{
-            fontSize: "clamp(2rem, 5vw, 3.5rem)",
-            fontVariationSettings: "'opsz' 96",
-            lineHeight: 1.05,
-          }}
-        >
-          {strikeFaust(meta.title)}
-        </h1>
+          {meta.role.length > 0 && (
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {meta.role.map((r) => (
+                <li
+                  key={r}
+                  className="rounded-full bg-bg-muted px-3 py-1 text-xs text-text-muted"
+                >
+                  {r}
+                </li>
+              ))}
+            </ul>
+          )}
+        </header>
 
-        {meta.role.length > 0 && (
-          <ul className="mt-5 flex flex-wrap gap-2">
-            {meta.role.map((r) => (
-              <li
-                key={r}
-                className="rounded-full bg-bg-muted px-3 py-1 text-xs text-text-muted"
-              >
-                {r}
-              </li>
-            ))}
-          </ul>
-        )}
-      </header>
-
-      <div className="mt-12 max-w-[680px]">
-        <Body />
-      </div>
-
-      {meta.gallery && meta.gallery.length > 0 && (
-        <section
-          aria-label="Galerie"
-          className="mt-16 border-t border-border pt-12"
-        >
-          <ProjectGallery gallery={meta.gallery} />
-        </section>
-      )}
+        <div className="mt-12 max-w-[680px]">
+          <Body />
+        </div>
+      </ProjectMedia>
 
       {meta.links && meta.links.length > 0 && (
         <section
