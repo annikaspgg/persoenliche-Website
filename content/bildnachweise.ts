@@ -157,9 +157,10 @@ export const bildnachweise: Bildnachweis[] = [
   },
   {
     usage: "Vergangenes — Klimabühne Transparente Welten (2023)",
-    description: "Hauptbild + zwei Galeriebilder.",
+    description:
+      "Bühnenfotos der Klimabühne-Produktion zum Thema Meer (Hauptbild + 2 Szenenfotos).",
     file: "klimabuehne-transparente-welten-{main,01,02}.webp",
-    photographer: TBD,
+    photographer: "Jule Lotte Bröcker",
   },
   {
     usage: "Vergangenes — Klimabühne Der Preis ist heiß (2023)",
