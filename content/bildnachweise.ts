@@ -123,7 +123,8 @@ export const bildnachweise: Bildnachweis[] = [
   },
   {
     usage: "Vergangenes — Jubiläumskonzert Freiburg (2025)",
-    description: "Hauptbild + zwei Galeriebilder.",
+    description:
+      "Klaviertrio mit Annika Spegg, Beverly Ellis und Alfonso Gomez beim Konzert zur 10-Jahres-Partnerschaft Freiburg–Suwon (Hauptbild + 2 Galeriebilder).",
     file: "jubilaeumskonzert-freiburg-{main,01,02}.webp",
     photographer: TBD,
   },
