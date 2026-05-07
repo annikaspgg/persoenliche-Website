@@ -143,8 +143,9 @@ export const bildnachweise: Bildnachweis[] = [
   },
   {
     usage: "Vergangenes — KommentarTheater (2024)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "kommentar-theater-{main,01,02}.webp",
+    description:
+      "Hauptbild Bühnensituation (Toiletten + AI-Kopf-Projektion) + Premieren-Plakat.",
+    file: "kommentar-theater-{main,01}.webp",
     photographer: TBD,
   },
   {
