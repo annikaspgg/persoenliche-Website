@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { allProjectSlugs, getProjectBySlug } from "@/content/projects";
+import { BackToOverview } from "@/components/BackToOverview";
 import { ProjectMedia } from "@/components/ProjectMedia";
 import { pageMetadata } from "@/lib/metadata";
 import { strikeFaust } from "@/lib/text";
@@ -37,13 +37,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <article className="mx-auto max-w-5xl px-6 py-16 md:px-12 md:py-24 lg:px-20">
-      <Link
-        href="/vergangenes"
-        className="inline-flex items-center gap-2 text-[0.9375rem] text-text-muted transition-colors hover:text-accent"
-      >
+      <BackToOverview className="inline-flex items-center gap-2 text-[0.9375rem] text-text-muted transition-colors hover:text-accent">
         <ArrowLeft size={16} aria-hidden />
         Zurück zur Übersicht
-      </Link>
+      </BackToOverview>
 
       <ProjectMedia
         mainImage={meta.mainImage}
@@ -116,13 +113,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       )}
 
       <div className="mt-20 border-t border-border pt-10">
-        <Link
-          href="/vergangenes"
-          className="inline-flex items-center gap-2 text-[0.9375rem] text-text-muted transition-colors hover:text-accent"
-        >
+        <BackToOverview className="inline-flex items-center gap-2 text-[0.9375rem] text-text-muted transition-colors hover:text-accent">
           <ArrowLeft size={16} aria-hidden />
           Zurück zur Übersicht
-        </Link>
+        </BackToOverview>
       </div>
     </article>
   );
