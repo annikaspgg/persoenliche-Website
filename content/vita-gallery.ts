@@ -45,4 +45,8 @@ export const vitaGallery: GallerySlide[] = [
     src: "/images/vita/gallery/gallery-bemalte-geige.webp",
     alt: "Bunt bemalte Geige auf einer Holzstaffelei in einem hellen Atelierraum.",
   },
+  {
+    src: "/images/vita/gallery/gallery-duo-sustainable.webp",
+    alt: "Duo Zwischen im Konzert in der Hochschulbibliothek; auf einem Notenständer ein Schild mit der Aufschrift 'This might not be sustainable for much longer'.",
+  },
 ];
