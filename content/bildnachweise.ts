@@ -129,8 +129,9 @@ export const bildnachweise: Bildnachweis[] = [
     photographer: TBD,
   },
   {
-    usage: "Vergangenes — Duo Zwischen / HUGO-Wettbewerb (2025)",
-    description: "Hauptbild + zwei Galeriebilder.",
+    usage: "Vergangenes — Hugo-Wettbewerb / Duo Zwischen (2025)",
+    description:
+      "Preisverleihung Hugo-Wettbewerb der Montforter Zwischentöne 2025 (Hauptbild + 2 Bühnenfotos).",
     file: "duo-zwischen-hugo-wettbewerb-{main,01,02}.webp",
     photographer: TBD,
   },
