@@ -117,8 +117,8 @@ export const bildnachweise: Bildnachweis[] = [
   },
   {
     usage: "Vergangenes — Venus and Adonis (2025)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "venus-and-adonis-{main,01,02}.webp",
+    description: "Hauptbild + vier Galeriebilder vom Barockopernpasticcio (HMT/Bachfest Leipzig).",
+    file: "venus-and-adonis-{main,01,02,03,04}.webp",
     photographer: TBD,
   },
   {
