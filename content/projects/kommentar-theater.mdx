@@ -7,6 +7,9 @@ export const meta = {
   mainImage: {
     src: "/images/projects/kommentar-theater-main.webp",
     alt: "Bühnensituation KommentarTheater: drei Toiletten mit Tüllröcken in Neongrün, Weiß und Lila stehen vor zwei Ringlichtern, im Hintergrund Projektion eines AI-generierten sprechenden Kopfes (D-ID).",
+    // 5:4-Quelle in 4:3-Card → vertikaler Crop-Spielraum. 65% biased
+    // nach unten = Bildinhalt rutscht im Frame nach oben (= "weiter hoch").
+    position: "center 65%",
   },
   gallery: [
     {
