@@ -150,7 +150,8 @@ export const bildnachweise: Bildnachweis[] = [
   },
   {
     usage: "Vergangenes — In solchen Bildern ist des Menschen Tag beschrieben (2023)",
-    description: "Hauptbild + zwei Galeriebilder.",
+    description:
+      "Probenraum-/Werkstatt-Bilder zur Solo-Performance: bemalte Geige auf Staffelei (Hauptbild) + 2 Detailbilder.",
     file: "in-solchen-bildern-des-menschen-tag-{main,01,02}.webp",
     photographer: TBD,
   },
