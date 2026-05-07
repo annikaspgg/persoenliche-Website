@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { allProjectSlugs, getProjectBySlug } from "@/content/projects";
+import { ProjectGallery } from "@/components/ProjectGallery";
 import { pageMetadata } from "@/lib/metadata";
 import { strikeFaust } from "@/lib/text";
 
@@ -92,30 +93,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           aria-label="Galerie"
           className="mt-16 border-t border-border pt-12"
         >
-          <ul
-            className={`grid gap-4 ${
-              meta.gallery.length === 1
-                ? "grid-cols-1"
-                : meta.gallery.length === 2
-                  ? "grid-cols-1 md:grid-cols-2"
-                  : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-            }`}
-          >
-            {meta.gallery.map((img) => (
-              <li
-                key={img.src}
-                className="relative aspect-[4/3] overflow-hidden rounded-[8px] bg-bg-muted"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </li>
-            ))}
-          </ul>
+          <ProjectGallery gallery={meta.gallery} />
         </section>
       )}
 
