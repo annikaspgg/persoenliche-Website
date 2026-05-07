@@ -171,8 +171,9 @@ export const bildnachweise: Bildnachweis[] = [
   },
   {
     usage: "Vergangenes — Drei Leseperformances (2022)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "drei-leseperformances-{main,01,02}.webp",
+    description:
+      "Annika Spegg liest am Mikrofon im Außenbereich beim Hock am Turm, davor spielen Kinder.",
+    file: "drei-leseperformances-main.webp",
     photographer: TBD,
   },
   {
