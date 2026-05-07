@@ -110,8 +110,9 @@ export const bildnachweise: Bildnachweis[] = [
   // — Vergangenes / Projekte —
   {
     usage: "Vergangenes — Rat der Generationen (2025)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "rat-der-generationen-{main,01,02}.webp",
+    description:
+      "Hauptbild (Bühne mit Netz und Bändern) + drei Galeriebilder aus dem „lebendigen Archiv“ des Rats.",
+    file: "rat-der-generationen-{main,01,02,03}.webp",
     photographer: TBD,
   },
   {
