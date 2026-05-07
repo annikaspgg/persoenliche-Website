@@ -164,8 +164,9 @@ export const bildnachweise: Bildnachweis[] = [
   },
   {
     usage: "Vergangenes — Klimabühne Der Preis ist heiß (2023)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "klimabuehne-preis-ist-heiss-{main,01,02}.webp",
+    description:
+      "Bühnenfotos zur Game-Show-Klimabühne (Hauptbild Stufenleiter-Szene + 1 Geigen-Klavier-Aufnahme).",
+    file: "klimabuehne-preis-ist-heiss-{main,01}.webp",
     photographer: TBD,
   },
   {
