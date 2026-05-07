@@ -19,6 +19,16 @@ type ImageEntry = {
    * Beispiele: "center", "right center", "50% 30%".
    */
   position?: string;
+  /**
+   * Optionaler Zoom (transform: scale(...)). Wirkt zusätzlich zu object-cover.
+   * Default: 1 (keine Skalierung).
+   */
+  scale?: number;
+  /**
+   * transform-origin für `scale`. Bestimmt, an welcher Kante der Zoom verankert ist.
+   * Default: "center". Beispiele: "center bottom" (unten verankert, Top wird mehr gecroppt).
+   */
+  scaleOrigin?: string;
 };
 
 export const heroImages: Record<Feld, ImageEntry> = {
@@ -73,9 +83,12 @@ export const homeImages: Record<Feld, ImageEntry> = {
     alt: "Annika Spegg in einer Performance: spielt Geige in einem silbernen Kostüm vor dunklem Bühnenhintergrund, von rotem und blauem Licht angestrahlt.",
     width: 1067,
     height: 1600,
-    // Portrait-Quelle in 4:5-Container: viel schwarzer Hintergrund über Annikas Kopf —
-    // Crop nach oben verschieben, sodass Gesicht und Geige weiter oben im Frame sitzen.
-    position: "center 120%",
+    // Portrait-Quelle in 4:5-Container: viel schwarzer Hintergrund über Annikas Kopf.
+    // Bottom-Crop (image bottom flush mit Kartenboden) + 1.1x Zoom mit Bottom-Anker:
+    // unten bleibt fest, oben wird stärker gecroppt — kein beige Streifen.
+    position: "center 100%",
+    scale: 1.1,
+    scaleOrigin: "center bottom",
   },
 };
 

@@ -50,7 +50,15 @@ export function HomeFelder({ showVitaLink = true }: Props = {}) {
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
-                    style={img.position ? { objectPosition: img.position } : undefined}
+                    style={{
+                      ...(img.position ? { objectPosition: img.position } : null),
+                      ...(img.scale && img.scale !== 1
+                        ? {
+                            transform: `scale(${img.scale})`,
+                            transformOrigin: img.scaleOrigin ?? "center",
+                          }
+                        : null),
+                    }}
                   />
                 </div>
 
