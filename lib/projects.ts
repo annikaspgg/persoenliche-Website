@@ -1,6 +1,11 @@
 export type ProjectImage = {
   src: string;
   alt: string;
+  /**
+   * Optionale CSS object-position für object-cover Crops.
+   * Default: "center". Beispiele: "center 20%", "right center".
+   */
+  position?: string;
 };
 
 export type ProjectLink = {

@@ -72,6 +72,11 @@ export function ProjectMedia({ mainImage, gallery, children }: Props) {
           priority
           sizes="(max-width: 1024px) 100vw, 1024px"
           className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          style={
+            mainImage.position
+              ? { objectPosition: mainImage.position }
+              : undefined
+          }
         />
       </button>
 

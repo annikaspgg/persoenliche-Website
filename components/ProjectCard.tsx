@@ -21,6 +21,11 @@ export function ProjectCard({ project }: Props) {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"
+            style={
+              project.mainImage.position
+                ? { objectPosition: project.mainImage.position }
+                : undefined
+            }
           />
         </div>
 
