@@ -73,6 +73,9 @@ export const homeImages: Record<Feld, ImageEntry> = {
     alt: "Annika Spegg in einer Performance: spielt Geige in einem silbernen Kostüm vor dunklem Bühnenhintergrund, von rotem und blauem Licht angestrahlt.",
     width: 1067,
     height: 1600,
+    // Portrait-Quelle in 4:5-Container: viel schwarzer Hintergrund über Annikas Kopf —
+    // Crop nach oben verschieben, sodass Gesicht und Geige weiter oben im Frame sitzen.
+    position: "center 20%",
   },
 };
 
