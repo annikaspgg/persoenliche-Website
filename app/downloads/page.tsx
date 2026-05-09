@@ -11,23 +11,35 @@ export const metadata: Metadata = pageMetadata(
   { path: "/downloads" },
 );
 
-const pressPhotos = [
+type PressPhoto = {
+  slug: string;
+  label: string;
+  preview: string;
+  file: string;
+  /** Optional CSS object-position für die Card-Vorschau. Default: "center". */
+  position?: string;
+};
+
+const pressPhotos: PressPhoto[] = [
   {
     slug: "geige",
     label: "Pressefoto Geige",
     preview: "/images/press/press-geige.webp",
     file: "/downloads/press/press-geige.jpg",
+    // Landscape-Quelle in 4:5-Card → horizontal-Crop. "100% center" zeigt
+    // die rechte Seite der Quelle (Annika + Geige), versteckt linke Pianist-Seite.
+    position: "100% center",
   },
   {
     slug: "dramaturgie",
     label: "Pressefoto Dramaturgie",
-    preview: "/images/press/press-dramaturgie.svg",
+    preview: "/images/press/press-dramaturgie.webp",
     file: "/downloads/press/press-dramaturgie.jpg",
   },
   {
     slug: "performance",
     label: "Pressefoto Performance",
-    preview: "/images/press/press-performance.svg",
+    preview: "/images/press/press-performance.webp",
     file: "/downloads/press/press-performance.jpg",
   },
 ];
@@ -149,6 +161,7 @@ export default function DownloadsPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
+                  style={photo.position ? { objectPosition: photo.position } : undefined}
                 />
               </div>
               <h3 className="mt-4 text-[1rem] text-text">{photo.label}</h3>

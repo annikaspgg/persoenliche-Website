@@ -201,13 +201,15 @@ export const bildnachweise: Bildnachweis[] = [
   },
   {
     usage: "Downloads — Pressefoto Dramaturgie",
-    description: "Hochauflösendes Pressefoto Dramaturgie.",
+    description:
+      "Annika Spegg im grauen Cardigan und schwarzen Top am Mikrofon mit Skript in der Hand.",
     file: "press-dramaturgie.jpg",
     photographer: TBD,
   },
   {
     usage: "Downloads — Pressefoto Performance",
-    description: "Hochauflösendes Pressefoto Performance.",
+    description:
+      "Annika Spegg lächelnd mit kunstvoll verändeter Geige (mit Pferdehaar bezogen) — atmosphärische Aufnahme bei Lampenlicht.",
     file: "press-performance.jpg",
     photographer: TBD,
   },
