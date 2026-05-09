@@ -15,7 +15,7 @@ const pressPhotos = [
   {
     slug: "geige",
     label: "Pressefoto Geige",
-    preview: "/images/press/press-geige.svg",
+    preview: "/images/press/press-geige.webp",
     file: "/downloads/press/press-geige.jpg",
   },
   {

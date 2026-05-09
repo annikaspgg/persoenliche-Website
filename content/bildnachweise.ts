@@ -192,7 +192,8 @@ export const bildnachweise: Bildnachweis[] = [
   // — Pressefotos (Downloads) —
   {
     usage: "Downloads — Pressefoto Geige",
-    description: "Hochauflösendes Pressefoto Geige.",
+    description:
+      "Annika Spegg im Profil mit Geige in grünem Samtoberteil, im Hintergrund unscharf der Konzertflügel.",
     file: "press-geige.jpg",
     photographer: TBD,
   },
