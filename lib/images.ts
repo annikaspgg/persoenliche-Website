@@ -89,7 +89,7 @@ export const homeImages: Record<Feld, ImageEntry> = {
     height: 1600,
     // Mobile Hero (4:3 Container, 2:3 Quelle): nach oben biased — mehr vom
     // Mikro/Skript unten sichtbar, weniger leerer Bühnenhintergrund oben.
-    mobilePosition: "center 65%",
+    mobilePosition: "center 45%",
   },
   performance: {
     src: "/images/home/home-performance.webp",
@@ -98,7 +98,7 @@ export const homeImages: Record<Feld, ImageEntry> = {
     height: 1600,
     // Mobile Hero: nach oben biased — mehr Bühne/Beine unten sichtbar,
     // weniger schwarze Decke über dem Kopf.
-    mobilePosition: "center 70%",
+    mobilePosition: "center 55%",
   },
 };
 
