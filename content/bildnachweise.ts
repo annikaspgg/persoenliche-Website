@@ -43,21 +43,23 @@ export const bildnachweise: Bildnachweis[] = [
   // — Startseite Mini-Texte —
   {
     usage: "Startseite — Mini-Text Geige",
-    description: "Sommerportrait von Annika Spegg mit Geige.",
-    file: "home-geige.jpg",
+    description:
+      "Annika Spegg im Profil mit Geige in grünem Samtoberteil, im Hintergrund unscharf der Konzertflügel.",
+    file: "home-geige.webp",
     photographer: TBD,
   },
   {
     usage: "Startseite — Mini-Text Dramaturgie",
-    description: "Mikrofon und Skript auf einem Tisch.",
-    file: "home-dramaturgie.jpg",
+    description:
+      "Annika Spegg im grauen Cardigan und schwarzen Top am Mikrofon mit Skript in der Hand.",
+    file: "home-dramaturgie.webp",
     photographer: TBD,
   },
   {
     usage: "Startseite — Mini-Text Performance",
     description:
-      "Annika Spegg spielt Geige in silbernem Kostüm, von rotem und blauem Bühnenlicht angestrahlt.",
-    file: "home-performance.jpg",
+      "Annika Spegg im silbernen Bodysuit mit lila-rosa Schmetterlingsflügeln und Mikrofon, sitzend auf einer Holzbühne vor warmem Spotlight.",
+    file: "home-performance.webp",
     photographer: TBD,
   },
 

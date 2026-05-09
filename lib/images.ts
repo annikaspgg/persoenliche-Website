@@ -70,35 +70,32 @@ export const heroImages: Record<Feld, ImageEntry> = {
 
 export const homeImages: Record<Feld, ImageEntry> = {
   geige: {
-    // Quellbild ist landscape 3:2 — wird per object-cover in den 4:5-Container geschnitten.
-    // Annika steht rechts der Bildmitte; "65% center" hält sie und die Geige im sichtbaren Ausschnitt.
-    src: "/images/home/home-geige.jpg",
-    alt: "Annika Spegg spielt Geige in grünem Samt-Oberteil bei einem Kammerkonzert, links ein Pianist am Flügel.",
+    // Landscape-Quelle (1600x1066, 3:2). In 4:5-HomeFelder-Container wird sie
+    // per object-cover horizontal beschnitten; "65% center" hält Annika + Geige
+    // rechts im sichtbaren Ausschnitt.
+    src: "/images/home/home-geige.webp",
+    alt: "Annika Spegg spielt Geige im Profil in grünem Samtoberteil, im Hintergrund unscharf der Konzertflügel und das Notenpult eines weiteren Musikers.",
     width: 1600,
     height: 1066,
     position: "65% center",
   },
   dramaturgie: {
-    src: "/images/home/home-dramaturgie.jpg",
-    alt: "Annika Spegg in einer dramaturgischen Bühnensituation: mit Skript und Mikrofon, im Dialog mit einer Performerin auf einer Leiter.",
+    src: "/images/home/home-dramaturgie.webp",
+    alt: "Annika Spegg im grauen Cardigan und schwarzen Top spricht ins Mikrofon und hält ein Skript in der Hand, vor blau-violettem Bühnenhintergrund.",
     width: 1067,
     height: 1600,
     // Mobile Hero-Karte (4:3 Container, 2:3 Quelle): Crop nach unten biased,
-    // damit der obere Teil des Bildes (Annika + Performerin auf der Leiter)
-    // mehr im Frame steht.
+    // damit Annikas Kopf und Mikrofon im oberen Frame-Bereich sitzen.
     mobilePosition: "center 25%",
   },
   performance: {
-    src: "/images/home/home-performance.jpg",
-    alt: "Annika Spegg in einer Performance: spielt Geige in einem silbernen Kostüm vor dunklem Bühnenhintergrund, von rotem und blauem Licht angestrahlt.",
-    width: 1067,
+    src: "/images/home/home-performance.webp",
+    alt: "Annika Spegg in einer Performance: silbernes Bodysuit mit lila-rosa Schmetterlingsflügeln, sitzt mit Mikrofon auf einer Holzbühne vor warmem Spotlight.",
+    width: 1065,
     height: 1600,
-    // Portrait-Quelle in 4:5-Container: viel schwarzer Hintergrund über Annikas Kopf.
-    // Bottom-Crop (image bottom flush mit Kartenboden) + 1.1x Zoom mit Bottom-Anker:
-    // unten bleibt fest, oben wird stärker gecroppt — kein beige Streifen.
-    position: "center 100%",
-    scale: 1.1,
-    scaleOrigin: "center bottom",
+    // Mobile Hero-Karte: Bildinhalt etwas nach unten biased, damit Gesicht
+    // und Mikrofon klar im 4:3-Frame sitzen.
+    mobilePosition: "center 30%",
   },
 };
 
