@@ -29,6 +29,12 @@ type ImageEntry = {
    * Default: "center". Beispiele: "center bottom" (unten verankert, Top wird mehr gecroppt).
    */
   scaleOrigin?: string;
+  /**
+   * Optionaler object-position-Override speziell für die mobile Hero-Karte
+   * in HeroHover (md:hidden). Wenn gesetzt, überschreibt sie `position` nur
+   * dort — HomeFelder und alle anderen Stellen lesen weiterhin `position`.
+   */
+  mobilePosition?: string;
 };
 
 export const heroImages: Record<Feld, ImageEntry> = {
@@ -77,6 +83,10 @@ export const homeImages: Record<Feld, ImageEntry> = {
     alt: "Annika Spegg in einer dramaturgischen Bühnensituation: mit Skript und Mikrofon, im Dialog mit einer Performerin auf einer Leiter.",
     width: 1067,
     height: 1600,
+    // Mobile Hero-Karte (4:3 Container, 2:3 Quelle): Crop nach unten biased,
+    // damit der obere Teil des Bildes (Annika + Performerin auf der Leiter)
+    // mehr im Frame steht.
+    mobilePosition: "center 25%",
   },
   performance: {
     src: "/images/home/home-performance.jpg",

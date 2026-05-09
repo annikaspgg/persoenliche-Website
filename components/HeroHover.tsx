@@ -152,7 +152,10 @@ export function HeroHover() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
-                  style={img.position ? { objectPosition: img.position } : undefined}
+                  style={(() => {
+                    const pos = img.mobilePosition ?? img.position;
+                    return pos ? { objectPosition: pos } : undefined;
+                  })()}
                 />
                 <div className="absolute inset-0 bg-bg/30" />
                 <div className="absolute inset-0 flex items-end p-5">
