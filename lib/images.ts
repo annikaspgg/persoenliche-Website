@@ -50,9 +50,9 @@ export const heroImages: Record<Feld, ImageEntry> = {
   dramaturgie: {
     src: "/images/hero/hero-dramaturgie.webp",
     alt:
-      "Annika Spegg mit Mikrofon und Skript auf der Bühne, im Halbprofil — dramaturgische Bühnensituation.",
-    width: 1067,
-    height: 1600,
+      "Annika Spegg im grauen Cardigan und schwarzen Top, hält das Mikrofon zum Mund und ein Tablet in der anderen Hand, vor blau-violettem Bühnenhintergrund.",
+    width: 1024,
+    height: 1536,
     // Portrait-Quelle in landscape-Hero: Gesicht liegt im oberen Drittel der Quelle.
     // "center 25%" hält Annikas Gesicht klar im sichtbaren Ausschnitt.
     position: "center 25%",

@@ -28,7 +28,7 @@ export const bildnachweise: Bildnachweis[] = [
   {
     usage: "Startseite — Hero (Dramaturgie)",
     description:
-      "Annika Spegg mit Mikrofon und Skript auf der Bühne, im Halbprofil.",
+      "Annika Spegg im grauen Cardigan mit Mikrofon und Tablet vor blau-violettem Bühnenhintergrund.",
     file: "hero-dramaturgie.webp",
     photographer: TBD,
   },
