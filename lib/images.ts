@@ -66,6 +66,8 @@ export const heroImages: Record<Feld, ImageEntry> = {
     // Querformat-Quelle (~16:9) füllt den Desktop-Hero fast aspect-genau.
     // Default-Center reicht — Annika sitzt mittig-rechts, links bleibt Platz
     // für den Titel-Overlay.
+    // Leichter Zoom, damit die Performerin im Vordergrund präsenter wird.
+    scale: 1.15,
   },
 };
 

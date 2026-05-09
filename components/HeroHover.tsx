@@ -51,7 +51,15 @@ export function HeroHover() {
                 loading="lazy"
                 sizes="100vw"
                 className="object-cover"
-                style={img.position ? { objectPosition: img.position } : undefined}
+                style={{
+                  ...(img.position ? { objectPosition: img.position } : null),
+                  ...(img.scale && img.scale !== 1
+                    ? {
+                        transform: `scale(${img.scale})`,
+                        transformOrigin: img.scaleOrigin ?? "center",
+                      }
+                    : null),
+                }}
               />
               {/* Dunkler Tint hinter dem Bild, damit der weiße Hover-Text klar liest */}
               <div className="absolute inset-0 bg-text/35" />
