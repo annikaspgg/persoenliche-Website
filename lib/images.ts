@@ -60,11 +60,12 @@ export const heroImages: Record<Feld, ImageEntry> = {
   performance: {
     src: "/images/hero/hero-performance.webp",
     alt:
-      "Annika Spegg in einer Performance: silbernes Bodysuit mit lila-rosa Schmetterlingsflügeln, sitzt mit Mikrofon auf einer Holzbühne vor warmem Spotlight.",
-    width: 1065,
-    height: 1600,
-    // Portrait-Quelle: Crop bei 40 % — Gesicht und Mikrofon zentral im sichtbaren Bereich.
-    position: "center 40%",
+      "Annika Spegg sitzt mit Mikrofon auf einer Holzbühne in gemustertem Bodysuit mit violett-rosa Stoff-Drapierungen an den Schultern, eine zweite Performerin im Hintergrund mit langen Bühnenstangen vor schwarzem Raum und warmen Spotlights.",
+    width: 1672,
+    height: 941,
+    // Querformat-Quelle (~16:9) füllt den Desktop-Hero fast aspect-genau.
+    // Default-Center reicht — Annika sitzt mittig-rechts, links bleibt Platz
+    // für den Titel-Overlay.
   },
 };
 
