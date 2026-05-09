@@ -50,12 +50,12 @@ export const heroImages: Record<Feld, ImageEntry> = {
   dramaturgie: {
     src: "/images/hero/hero-dramaturgie.webp",
     alt:
-      "Annika Spegg im grauen Cardigan und schwarzen Top, hält das Mikrofon zum Mund und ein Tablet in der anderen Hand, vor blau-violettem Bühnenhintergrund.",
-    width: 1024,
-    height: 1536,
-    // Portrait-Quelle in landscape-Hero: Gesicht liegt im oberen Drittel der Quelle.
-    // "center 25%" hält Annikas Gesicht klar im sichtbaren Ausschnitt.
-    position: "center 25%",
+      "Annika Spegg im grauen Cardigan und schwarzen Top, hält das Mikrofon zum Mund und ein Tablet in der anderen Hand, vor blau-violettem Bühnenhintergrund — Querformat-Aufnahme mit viel offenem Raum links.",
+    width: 1672,
+    height: 941,
+    // Querformat-Quelle (~16:9) füllt den Desktop-Hero fast aspect-genau.
+    // Default-Center reicht — Annika sitzt rechts im Bild, links bleibt Platz
+    // für den Titel-Overlay.
   },
   performance: {
     src: "/images/hero/hero-performance.webp",
