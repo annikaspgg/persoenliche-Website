@@ -26,9 +26,10 @@ const pressPhotos: PressPhoto[] = [
     label: "Pressefoto Geige",
     preview: "/images/press/press-geige.webp",
     file: "/downloads/press/press-geige.jpg",
-    // Landscape-Quelle in 4:5-Card → horizontal-Crop. "100% center" zeigt
-    // die rechte Seite der Quelle (Annika + Geige), versteckt linke Pianist-Seite.
-    position: "100% center",
+    // Landscape-Quelle in 4:5-Card → horizontal-Crop. Bias nach rechts,
+    // aber nicht ganz hart bei 100% — bei 80% rutscht der Crop wieder
+    // ein Stück zurück, etwas mehr Pianisten-Silhouette links sichtbar.
+    position: "80% center",
   },
   {
     slug: "dramaturgie",
