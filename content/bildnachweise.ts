@@ -138,12 +138,6 @@ export const bildnachweise: Bildnachweis[] = [
     photographer: TBD,
   },
   {
-    usage: "Vergangenes — Wanderer, es gibt keinen Weg (2025/2026)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "wanderer-es-gibt-keinen-weg-{main,01,02}.webp",
-    photographer: TBD,
-  },
-  {
     usage: "Vergangenes — KommentarTheater (2024)",
     description:
       "Hauptbild Bühnensituation (Toiletten + AI-Kopf-Projektion) + Premieren-Plakat.",
@@ -176,18 +170,6 @@ export const bildnachweise: Bildnachweis[] = [
     description:
       "Annika Spegg liest am Mikrofon im Außenbereich beim Hock am Turm, davor spielen Kinder.",
     file: "drei-leseperformances-main.webp",
-    photographer: TBD,
-  },
-  {
-    usage: "Vergangenes — Primadonna 2.0 (2021)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "primadonna-2-0-{main,01,02}.webp",
-    photographer: TBD,
-  },
-  {
-    usage: "Vergangenes — Junge Oper Baden-Württemberg (2021)",
-    description: "Hauptbild + zwei Galeriebilder.",
-    file: "junge-oper-baden-wuerttemberg-{main,01,02}.webp",
     photographer: TBD,
   },
 
