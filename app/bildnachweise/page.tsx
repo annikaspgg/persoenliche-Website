@@ -43,23 +43,25 @@ export default function BildnachweisePage() {
             </dt>
             <dd className="md:col-span-8">
               <p className="text-[0.9375rem] text-text">{item.description}</p>
-              <p className="mt-2 text-[0.875rem] italic text-text-muted">
-                {item.photographerUrl ? (
-                  <a
-                    href={item.photographerUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent underline decoration-1 underline-offset-4 hover:text-accent-hover"
-                  >
-                    {item.photographer ?? item.photographerUrl}
-                  </a>
-                ) : (
-                  item.photographer ?? "[Fotograf:in TBD]"
-                )}
-                {item.license && (
-                  <span className="text-text-muted">{` · ${item.license}`}</span>
-                )}
-              </p>
+              {(item.photographer || item.photographerUrl) && (
+                <p className="mt-2 text-[0.875rem] italic text-text-muted">
+                  {item.photographerUrl ? (
+                    <a
+                      href={item.photographerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent underline decoration-1 underline-offset-4 hover:text-accent-hover"
+                    >
+                      {item.photographer ?? item.photographerUrl}
+                    </a>
+                  ) : (
+                    item.photographer
+                  )}
+                  {item.license && (
+                    <span className="text-text-muted">{` · ${item.license}`}</span>
+                  )}
+                </p>
+              )}
             </dd>
           </div>
         ))}
