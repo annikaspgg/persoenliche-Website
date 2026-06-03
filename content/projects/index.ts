@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { compareProjects, type ProjectMeta } from "@/lib/projects";
 
+import FaustMargareteBody, { meta as faustMargareteMeta } from "./faust-margarete.mdx";
 import RatBody, { meta as ratMeta } from "./rat-der-generationen.mdx";
 import VenusBody, { meta as venusMeta } from "./venus-and-adonis.mdx";
 import JubilaeumBody, { meta as jubilaeumMeta } from "./jubilaeumskonzert-freiburg.mdx";
@@ -23,6 +24,7 @@ export type ProjectEntry = {
 };
 
 const entries: ProjectEntry[] = [
+  { meta: faustMargareteMeta as ProjectMeta, Body: FaustMargareteBody },
   { meta: ratMeta as ProjectMeta, Body: RatBody },
   { meta: venusMeta as ProjectMeta, Body: VenusBody },
   { meta: jubilaeumMeta as ProjectMeta, Body: JubilaeumBody },

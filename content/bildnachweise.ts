@@ -111,6 +111,13 @@ export const bildnachweise: Bildnachweis[] = [
 
   // — Vergangenes / Projekte —
   {
+    usage: "Vergangenes — Faust.Margarete // GRETCHEN WANTS A FULL STORY (2026)",
+    description:
+      "Szenenfotos der Uraufführung im Ost-Passage Theater Leipzig (Hauptbild Spiegel-Szene + drei Galeriebilder: Geige, Spiegelblick, Blaulicht).",
+    file: "faust-margarete-{main,01,02,03}.jpg",
+    photographer: TBD,
+  },
+  {
     usage: "Vergangenes — Rat der Generationen (2025)",
     description:
       "Hauptbild (Bühne mit Netz und Bändern) + drei Galeriebilder aus dem „lebendigen Archiv“ des Rats.",
