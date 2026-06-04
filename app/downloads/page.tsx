@@ -166,9 +166,6 @@ export default function DownloadsPage() {
                 />
               </div>
               <h3 className="mt-4 text-[1rem] text-text">{photo.label}</h3>
-              <p className="mt-1 text-sm italic text-text-muted">
-                Fotograf:in: TBD
-              </p>
               <div className="mt-4">
                 <Button as="a" href={photo.file} download variant="ghost">
                   <Download size={16} aria-hidden />
