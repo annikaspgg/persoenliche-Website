@@ -83,16 +83,16 @@ export default function VitaPage() {
         <VitaSlideshow slides={vitaGallery} />
       </section>
 
-      {/* Abschluss: Kurzvita-PDF */}
+      {/* Abschluss: Vita-PDF */}
       <section className="mx-auto mt-16 max-w-[680px] px-6 pb-24 md:mt-24 md:pb-32">
         <div className="border-t border-border pt-10">
           <Button
             as="a"
-            href="/downloads/annika-spegg-kurzvita.pdf"
+            href="/downloads/annika-spegg-vita.pdf"
             download
           >
             <Download size={18} aria-hidden />
-            Kurzvita als PDF herunterladen
+            Vita als PDF herunterladen
           </Button>
         </div>
       </section>
