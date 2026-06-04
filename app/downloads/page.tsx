@@ -45,6 +45,15 @@ const pressPhotos: PressPhoto[] = [
   },
 ];
 
+const pressArticles = [
+  {
+    title: "Die Musiktheaterschaffende Annika Spegg stellt die Gretchenfrage",
+    source: "kreuzer",
+    date: "Mai 2026",
+    file: "/downloads/annika-spegg-kreuzer-mai-2026.pdf",
+  },
+];
+
 const videos = [
   {
     label: "Als Geigerin",
@@ -177,7 +186,47 @@ export default function DownloadsPage() {
         </ul>
       </section>
 
-      {/* 3. Videos / Hörproben */}
+      {/* 3. Pressestimmen */}
+      <section
+        aria-labelledby="pressestimmen-heading"
+        className="mt-20 border-t border-border pt-12"
+      >
+        <SectionHeading id="pressestimmen-heading">Pressestimmen</SectionHeading>
+        <p className="mt-6 max-w-[680px] text-[1.0625rem] leading-[1.6] text-text">
+          Artikel und Berichte über Annika Spegg und ihre Arbeit.
+        </p>
+
+        <ul className="mt-10 max-w-2xl divide-y divide-border border-y border-border">
+          {pressArticles.map((article) => (
+            <li
+              key={article.file}
+              className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <span className="flex flex-col gap-1">
+                <span
+                  className="font-display text-text"
+                  style={{
+                    fontSize: "1.25rem",
+                    fontVariationSettings: "'opsz' 60",
+                    lineHeight: 1.25,
+                  }}
+                >
+                  {strikeFaust(article.title)}
+                </span>
+                <span className="text-sm text-text-muted">
+                  {article.source} · {article.date}
+                </span>
+              </span>
+              <Button as="a" href={article.file} download variant="ghost">
+                <Download size={16} aria-hidden />
+                PDF
+              </Button>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* 4. Videos / Hörproben */}
       <section
         aria-labelledby="videos-heading"
         className="mt-20 border-t border-border pt-12"
@@ -216,7 +265,7 @@ export default function DownloadsPage() {
         </ul>
       </section>
 
-      {/* 4. Profile & Links */}
+      {/* 5. Profile & Links */}
       <section
         aria-labelledby="profile-heading"
         className="mt-20 border-t border-border pt-12"
