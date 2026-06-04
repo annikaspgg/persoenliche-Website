@@ -131,11 +131,11 @@ export default function DownloadsPage() {
         <div className="mt-8">
           <Button
             as="a"
-            href="/downloads/annika-spegg-kurzvita.pdf"
+            href="/downloads/annika-spegg-vita.pdf"
             download
           >
             <Download size={18} aria-hidden />
-            Kurzvita als PDF herunterladen
+            Vita als PDF herunterladen
           </Button>
         </div>
       </section>
