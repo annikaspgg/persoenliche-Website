@@ -47,6 +47,12 @@ const pressPhotos: PressPhoto[] = [
 
 const pressArticles = [
   {
+    title: "Gretchens ganze Geschichte",
+    source: "Kulturreport",
+    date: "27. Mai 2026",
+    file: "/downloads/annika-spegg-kulturreport-2026-05-27.pdf",
+  },
+  {
     title: "Die Musiktheaterschaffende Annika Spegg stellt die Gretchenfrage",
     source: "kreuzer",
     date: "Mai 2026",
