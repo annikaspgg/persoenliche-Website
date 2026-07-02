@@ -45,7 +45,15 @@ const pressPhotos: PressPhoto[] = [
   },
 ];
 
-const pressArticles = [
+type PressArticle = {
+  title: string;
+  source: string;
+  date: string;
+  file: string;
+  url?: string;
+};
+
+const pressArticles: PressArticle[] = [
   {
     title: "Gretchens ganze Geschichte",
     source: "Kulturreport",
@@ -57,6 +65,20 @@ const pressArticles = [
     source: "kreuzer",
     date: "Mai 2026",
     file: "/downloads/annika-spegg-kreuzer-mai-2026.pdf",
+  },
+  {
+    title: "Kritik zu „GRETCHEN WANTS A FULL STORY“ von Cord Beintmann",
+    source: "Stuttgarter Zeitung",
+    date: "27. Juni 2026",
+    url: "https://www.stuttgarter-zeitung.de/kultur/studio-theater-endlich-wird-gretchens-ganze-geschichte-erzaehlt-79252910.html",
+    file: "/downloads/Kritik_Stz_Cord_Beintmann.pdf",
+  },
+  {
+    title: "Kritik zu „GRETCHEN WANTS A FULL STORY“ von Alexander Walther",
+    source: "Theaterkompass",
+    date: "27. Juni 2026",
+    url: "https://theaterkompass.de/beitraege/gretchens-tragoedie-mit-verdi-und-wagner-faust-margarete-gretchen-wants-a-full-story-im-studiotheaterstuttgart-62784",
+    file: "/downloads/Kritik_Theaterkosmos_AlexanderWalther.pdf",
   },
 ];
 
@@ -206,7 +228,7 @@ export default function DownloadsPage() {
           {pressArticles.map((article) => (
             <li
               key={article.file}
-              className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between"
+              className="flex flex-col gap-4 py-6 sm:flex-row sm:items-start sm:justify-between"
             >
               <span className="flex flex-col gap-1">
                 <span
@@ -223,10 +245,24 @@ export default function DownloadsPage() {
                   {article.source} · {article.date}
                 </span>
               </span>
-              <Button as="a" href={article.file} download variant="ghost">
-                <Download size={16} aria-hidden />
-                PDF
-              </Button>
+              <span className="flex shrink-0 flex-wrap gap-3">
+                {article.url && (
+                  <Button
+                    as="a"
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="ghost"
+                  >
+                    <ArrowUpRight size={16} aria-hidden />
+                    Online lesen
+                  </Button>
+                )}
+                <Button as="a" href={article.file} download variant="ghost">
+                  <Download size={16} aria-hidden />
+                  PDF
+                </Button>
+              </span>
             </li>
           ))}
         </ul>

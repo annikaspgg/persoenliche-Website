@@ -11,6 +11,7 @@ type AktuellesMeta = {
   cast?: string;
   links?: Array<{ href: string; label: string }>;
   dates: Array<{ date: string; venue: string; city?: string }>;
+  datesNote?: string;
 };
 
 const meta = rawMeta as AktuellesMeta;
@@ -78,19 +79,27 @@ export function AktuellesCard() {
               </p>
             )}
 
-            <ul className="mt-8 space-y-2 border-t border-border pt-6 text-[0.9375rem] text-text-muted">
-              {meta.dates.map((d) => (
-                <li
-                  key={`${d.date}-${d.venue}`}
-                  className="flex flex-wrap items-baseline gap-x-4"
-                >
-                  <span className="font-medium text-text">
-                    {formatDate(d.date)}
-                  </span>
-                  <span>{d.venue}</span>
-                </li>
-              ))}
-            </ul>
+            {(meta.dates.length > 0 || meta.datesNote) && (
+              <div className="mt-8 border-t border-border pt-6 text-[0.9375rem] text-text-muted">
+                {meta.datesNote && meta.dates.length === 0 ? (
+                  <p>{meta.datesNote}</p>
+                ) : (
+                  <ul className="space-y-2">
+                    {meta.dates.map((d) => (
+                      <li
+                        key={`${d.date}-${d.venue}`}
+                        className="flex flex-wrap items-baseline gap-x-4"
+                      >
+                        <span className="font-medium text-text">
+                          {formatDate(d.date)}
+                        </span>
+                        <span>{d.venue}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
 
             {meta.links && meta.links.length > 0 && (
               <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3">

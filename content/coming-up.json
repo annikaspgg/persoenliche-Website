@@ -46,6 +46,32 @@
     "role": "Künstlerische Leitung / Performance"
   },
   {
+    "date": "2026-07-25",
+    "title": "Konzerte mit dem Sprungbrettorchester Stuttgart e. V.",
+    "venue": "Stuttgart"
+  },
+  {
+    "date": "2026-07-26",
+    "title": "Konzerte mit dem Sprungbrettorchester Stuttgart e. V.",
+    "venue": "Stuttgart"
+  },
+  {
+    "date": "2026-10-11",
+    "title": "Konzerte mit dem Sprungbrettorchester Stuttgart e. V.",
+    "venue": "Stuttgart"
+  },
+  {
+    "date": "2026-10-12",
+    "title": "Konzerte mit dem Sprungbrettorchester Stuttgart e. V.",
+    "venue": "Stuttgart"
+  },
+  {
+    "date": "2026-10-17",
+    "title": "Konzert in der Stadtkirche Ludwigsburg",
+    "venue": "Stadtkirche Ludwigsburg",
+    "city": "Ludwigsburg"
+  },
+  {
     "date": "2026-10-26",
     "title": "Sonst gute Nacht — Uraufführung dreier Kurzopern",
     "venue": "Frankfurt Lab",
@@ -53,5 +79,24 @@
     "link": null,
     "note": "im Rahmen der Akademie Musiktheater heute",
     "role": "Dramaturgie"
+  },
+  {
+    "date": "2026-11-15",
+    "title": "Johannes Brahms: „Ein deutsches Requiem”",
+    "venue": "Stadtkirche Heidenheim",
+    "city": "Heidenheim"
+  },
+  {
+    "date": "2026-11-20",
+    "title": "Konzert in der Stiftskirche Stuttgart mit der Stiftsphilharmonie Stuttgart",
+    "venue": "Stiftskirche Stuttgart",
+    "city": "Stuttgart",
+    "note": "Leitung: Kay Johannsen"
+  },
+  {
+    "date": "2026-11-22",
+    "title": "Johannes Brahms: „Ein deutsches Requiem”",
+    "venue": "Stadtkirche Aalen",
+    "city": "Aalen"
   }
 ]
