@@ -2,17 +2,9 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { strikeFaust } from "@/lib/text";
+import type { Termin } from "@/lib/termine";
 
-export type Termin = {
-  date: string;
-  title: string;
-  venue: string;
-  city?: string;
-  link?: string | null;
-  note?: string;
-  role?: string;
-  image?: { src: string; alt: string };
-};
+export type { Termin };
 
 const dayFormatter = new Intl.DateTimeFormat("de-DE", { weekday: "long" });
 const fullDateFormatter = new Intl.DateTimeFormat("de-DE", {
@@ -34,6 +26,9 @@ export function TerminListItem({ termin, dimmed = false }: Props) {
   const date = parseDate(termin.date);
   const weekday = dayFormatter.format(date);
   const formatted = fullDateFormatter.format(date);
+  const formattedEnd = termin.endDate
+    ? fullDateFormatter.format(parseDate(termin.endDate))
+    : null;
 
   return (
     <li
@@ -55,6 +50,9 @@ export function TerminListItem({ termin, dimmed = false }: Props) {
           >
             {formatted}
           </p>
+          {formattedEnd && (
+            <p className="mt-1 text-sm text-text-muted">bis {formattedEnd}</p>
+          )}
         </div>
 
         <div className="md:col-span-8">
@@ -95,16 +93,21 @@ export function TerminListItem({ termin, dimmed = false }: Props) {
                 </p>
               )}
 
-              {termin.link && (
-                <a
-                  href={termin.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-1 text-[0.9375rem] text-accent underline decoration-1 underline-offset-4 transition-colors hover:text-accent-hover"
-                >
-                  Mehr Infos
-                  <ArrowUpRight size={14} aria-hidden />
-                </a>
+              {termin.links && termin.links.length > 0 && (
+                <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                  {termin.links.map((l) => (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[0.9375rem] text-accent underline decoration-1 underline-offset-4 transition-colors hover:text-accent-hover"
+                    >
+                      {l.label}
+                      <ArrowUpRight size={14} aria-hidden />
+                    </a>
+                  ))}
+                </p>
               )}
             </div>
 

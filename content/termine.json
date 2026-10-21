@@ -4,8 +4,13 @@
     "title": "Begegnungen — Streichquartettkonzert mit dem Zentaur-Quartett",
     "venue": "Grieg-Begegnungsstätte Leipzig",
     "city": "Leipzig",
-    "link": "https://www.leipzig-im.de/index.php?section=details&auswahl=veranstaltungen&auswahl2=225150",
-    "role": "Geige"
+    "role": "Geige",
+    "links": [
+      {
+        "label": "Mehr Infos",
+        "href": "https://www.leipzig-im.de/index.php?section=details&auswahl=veranstaltungen&auswahl2=225150"
+      }
+    ]
   },
   {
     "date": "2026-05-08",
@@ -30,8 +35,13 @@
     "title": "Faust.Margarete // GRETCHEN WANTS A FULL STORY",
     "venue": "Studio Theater Stuttgart",
     "city": "Stuttgart",
-    "link": "https://www.studiotheater.de/product/10362/",
-    "role": "Künstlerische Leitung / Performance"
+    "role": "Künstlerische Leitung / Performance",
+    "links": [
+      {
+        "label": "Mehr Infos",
+        "href": "https://www.studiotheater.de/product/10362/"
+      }
+    ]
   },
   {
     "date": "2026-06-26",
@@ -56,14 +66,26 @@
     "venue": "Stuttgart"
   },
   {
-    "date": "2026-10-11",
-    "title": "Konzerte mit dem Sprungbrettorchester Stuttgart e. V.",
-    "venue": "Stuttgart"
+    "date": "2026-10-10",
+    "title": "Solo-Konzert mit dem Sprungbrettorchester",
+    "venue": "Stuttgart-Plieningen",
+    "links": [
+      {
+        "label": "Konzertvideo ansehen",
+        "href": "https://www.youtube.com/watch?v=U3KjMK4ST4k"
+      }
+    ]
   },
   {
-    "date": "2026-10-12",
-    "title": "Konzerte mit dem Sprungbrettorchester Stuttgart e. V.",
-    "venue": "Stuttgart"
+    "date": "2026-10-11",
+    "title": "Solo-Konzert mit dem Sprungbrettorchester",
+    "venue": "Stuttgart-Möhringen",
+    "links": [
+      {
+        "label": "Konzertvideo ansehen",
+        "href": "https://www.youtube.com/watch?v=U3KjMK4ST4k"
+      }
+    ]
   },
   {
     "date": "2026-10-17",
@@ -76,9 +98,14 @@
     "title": "Sonst gute Nacht — Uraufführung dreier Kurzopern",
     "venue": "Frankfurt Lab",
     "city": "Frankfurt",
-    "link": null,
     "note": "im Rahmen der Akademie Musiktheater heute",
-    "role": "Dramaturgie"
+    "role": "Dramaturgie",
+    "links": [
+      {
+        "label": "Mehr Infos",
+        "href": "https://frankfurt-lab.de/events/sonst-gute-nacht/"
+      }
+    ]
   },
   {
     "date": "2026-11-15",
@@ -98,5 +125,24 @@
     "title": "Johannes Brahms: „Ein deutsches Requiem”",
     "venue": "Stadtkirche Aalen",
     "city": "Aalen"
+  },
+  {
+    "date": "2026-11-27",
+    "title": "Stahlgipfel",
+    "venue": "Grillo-Theater",
+    "city": "Essen",
+    "note": "Weitere Termine in Planung.",
+    "links": [
+      {
+        "label": "Infos & Tickets",
+        "href": "https://www.theater-essen.de/programm/a-z/stahlgipfel/"
+      }
+    ]
+  },
+  {
+    "date": "2026-12-25",
+    "title": "Katholische Kirche Stuttgart-Hofen",
+    "venue": "Katholische Kirche",
+    "city": "Stuttgart-Hofen"
   }
 ]

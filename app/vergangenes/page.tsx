@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { ProjectCard } from "@/components/ProjectCard";
+import { TerminListItem } from "@/components/TerminListItem";
 import { projects } from "@/content/projects";
 import { pageMetadata } from "@/lib/metadata";
+import { getTermine } from "@/lib/termine.server";
 
 export const metadata: Metadata = pageMetadata(
   "Vergangenes",
@@ -9,7 +11,9 @@ export const metadata: Metadata = pageMetadata(
   { path: "/vergangenes" },
 );
 
-export default function VergangenesPage() {
+export default async function VergangenesPage() {
+  const { past } = await getTermine();
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32 lg:px-20">
       <h1
@@ -33,6 +37,27 @@ export default function VergangenesPage() {
           <ProjectCard key={p.meta.slug} project={p.meta} />
         ))}
       </ul>
+
+      {past.length > 0 && (
+        <section className="mt-24" aria-labelledby="past-events-heading">
+          <h2
+            id="past-events-heading"
+            className="font-display text-text"
+            style={{
+              fontSize: "clamp(1.75rem, 3vw, 2.25rem)",
+              fontVariationSettings: "'opsz' 80",
+              lineHeight: 1.1,
+            }}
+          >
+            Vergangene Veranstaltungen
+          </h2>
+          <ul className="mt-8 border-b border-border">
+            {past.map((t) => (
+              <TerminListItem key={`${t.date}-${t.venue}`} termin={t} />
+            ))}
+          </ul>
+        </section>
+      )}
     </section>
   );
 }
