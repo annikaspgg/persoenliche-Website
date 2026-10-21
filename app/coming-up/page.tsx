@@ -9,6 +9,10 @@ export const metadata: Metadata = pageMetadata(
   { path: "/coming-up" },
 );
 
+// Stündlich neu rendern, damit vergangene Termine ohne neues Deploy
+// automatisch von "Coming Up" nach "Vergangen" wandern.
+export const revalidate = 3600;
+
 const termine = comingUpData as Termin[];
 
 function todayMidnight(): Date {
